@@ -1,0 +1,69 @@
+// **********************************
+// Colors
+// If you see yourself setting a color explicitly in the
+// code three times or more, it should probably be here.
+// **********************************
+$white:         #fff;
+$snowwhite:     #f3f3f5;
+$black:         #000;
+$grey:          #333;
+$lightgrey:     #b8b9ba;
+$red:           #b04344;
+$indianred:     #b88278;
+$palered:       #f0e4e2;
+$blue:          #486ca0;
+$indianblue:    #728aab;
+$aliceblue:     #f3f5f8;
+$paleblue:      #e3e8ee;
+$palenavy:      #dcdce6;
+$purple:        #5b598f;
+$indianpurple:  #8382a7;
+$palepurple:    #7472a0;
+$marqueered :   #c6867c;
+$marqueeblue:   #7698be;
+$marqueepurple: #8683ab;
+$error:         #e02020;
+$hover:         #7698be;
+$bms-fuschia:   #be2bbb;
+$lightpink:     #eddfef;
+
+// **********************************
+// Breakpoints
+// - Projects should not have more than 4 breakpoints.
+// - All breakpoints should be set by one of these variables.
+// - Tweak breakpoints variables for project if needed.
+// - Discuss with fellow devs if you feel like you need another breakpoint.
+// - Use mobile first approach and media query mixins.
+// **********************************
+$sm:      576px;
+$md:      768px;
+$lg:      992px;
+$xl:      1200px;
+$xxl:     1440px;
+$tablet:  1025px;
+
+// **********************************
+// Site Layout Variables
+// **********************************
+$site-main-width:     1240px;
+$site-content-width:  1040px;
+$mobile-margin:       0.9375rem; // 15px
+$component-padding:   3.75rem; // 60px // padding top and bottom of the component
+$h-margin:            1.25rem; // 20px
+$p-margin:            .625rem; // 10px
+$img-margin:          0.9375rem; // 15px
+$site-gutter:         1.875rem; // 30px // padding btw columns
+$site-padding-md:     1.875rem; // 30px
+$site-padding-lg:     2.5rem; // 40px;
+
+// **********************************
+// Fonts
+// Font variables for easy access and refactor.
+// **********************************
+$roboto:  "roboto", sans-serif; // 9, 5, 4 black, medium, regular
+$proxima: "proxima-nova", sans-serif; // 9, 7 black, bold
+
+// **********************************
+// focus style
+// **********************************
+$focus-style: 0 0 0 2px rgba($blue, .2);

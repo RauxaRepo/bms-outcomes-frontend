@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  padding-right: $mobile-margin;
+  padding-left: $mobile-margin;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@include media-breakpoint-up($md) {
+  .container {
+    padding-right: rem(40px);
+    padding-left: rem(40px);
+  }
+}
+
+@include media-breakpoint-up($tablet) {
+  .container {
+    padding-right: rem(60px);
+    padding-left: rem(60px);
+  }
+}
+
+@include media-breakpoint-up($xl) {
+  .container {
+    max-width: $site-content-width;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

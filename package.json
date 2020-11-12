@@ -1,0 +1,70 @@
+{
+  "name": "BMS-OUTCOMES-FRONTEND",
+  "version": "0.0.1",
+  "description": "Front-end build system for BMS-OUTCOMES-FRONTEND static web development.",
+  "license": "MIT",
+  "main": "",
+  "repository": "bms-outcomes-frontend",
+  "author": {
+    "name": "Rauxa",
+    "email": "",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "gulp --require babel-register --gulpfile ./.starterKit/tasks dev --development",
+    "prod": "gulp --require babel-register --gulpfile ./.starterKit/tasks prod --production",
+    "deploy": "gulp --require babel-register --gulpfile ./.starterKit/tasks deploy --production"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "babelrc": false
+  },
+  "browserslist": [
+    "ie >= 11",
+    "last 2 version",
+    "> 5%"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "autoprefixer": "^9.7.4",
+    "vanilla-lazyload": "^15.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.26.13",
+    "cssnano": "^4.1.10",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-hb": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-open": "^3.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-surge": "^0.1.4",
+    "gulp-watch": "^5.0.1",
+    "merge-stream": "^2.0.0",
+    "normalize-scss": "^7.0.1",
+    "postcss-discard-comments": "^4.0.2",
+    "webpack": "^4.41.5",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^14.2.2"
+  }
+}

@@ -1,0 +1,28 @@
+// custom br 
+
+// break in 0 ~ md(768)
+.display-mobile {
+  display: initial;
+
+  @include media-breakpoint-up($md) {
+    display: none;
+  }
+}
+
+// break in md(768) ~
+.display-tablet-to-desktop {
+  display: none;
+
+  @include media-breakpoint-up($md) {
+    display: initial;
+  }
+}
+
+// break in tablet ~ 
+.display-desktop {
+  display: none;
+
+  @include media-breakpoint-up($tablet) {
+    display: initial;
+  }
+}

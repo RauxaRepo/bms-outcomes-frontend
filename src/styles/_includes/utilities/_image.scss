@@ -1,0 +1,48 @@
+//  helper
+.narrow-width {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.icon {
+  height: auto;
+  width: auto;
+  max-width: 60px;
+}
+
+@include media-breakpoint-up($lg) {
+  .narrow,
+  .narrow-width {
+    width: 78%;
+  }
+}
+
+.mobile-image {
+  display: block;
+}
+
+.desktop-image {
+  display: none;
+}
+
+@include media-breakpoint-up($md) {
+  .mobile-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+  }
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}

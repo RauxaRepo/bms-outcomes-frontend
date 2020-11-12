@@ -1,0 +1,34 @@
+// **********************************
+// 	_mixins.scss
+//  SASS mixins to be used throughout the project to prevent code repeat and ensure maintainability.
+// **********************************
+
+
+// **********************************
+// Media queries mixins
+// **********************************
+@mixin media-breakpoint-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($breakpoint-min, $breakpoint-max) {
+  @media (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}
+
+// **********************************
+// Focus styles
+// **********************************
+@mixin focus-styles() {
+  outline: none;
+  box-shadow: $focus-style;
+}

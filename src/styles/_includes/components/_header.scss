@@ -1,0 +1,23 @@
+// block [B]
+.header {
+  padding-bottom: 20px;
+  background-color: lighten($color: $black, $amount: 50);
+  width: 100%;
+
+  // element [E]
+  &__container {
+    border: 1px dashed $lightgrey;
+    background-color: lighten($color: $black, $amount: 10);
+    min-height: 100px;
+  }
+
+  // element [E]
+  &__block {
+    position: relative;
+
+    // modifier [M]
+    &--nav {
+      width: 100%;
+    }
+  }
+}

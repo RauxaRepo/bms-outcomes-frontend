@@ -1,0 +1,39 @@
+// ABSTRACTS
+@import '_includes/abstracts/variables';
+@import '_includes/abstracts/mixins';
+@import '_includes/abstracts/functions';
+// **********************************************
+
+// BASE
+@import '_includes/base/fonts';
+@import '_includes/base/resets';
+@import '_includes/base/typography';
+// **********************************************
+
+// LAYOUT
+@import '_includes/layout/container';
+@import '_includes/layout/main';
+// **********************************************
+
+// THEMES
+@import '_includes/themes/themes';
+// **********************************************
+
+// COMPONENTS
+@import '_includes/components/banner';
+@import '_includes/components/header';
+@import '_includes/components/footer';
+@import '_includes/components/hero';
+// **********************************************
+
+// UTILITIES 
+@import '_includes/utilities/background-color';
+@import '_includes/utilities/break';
+@import '_includes/utilities/color';
+@import '_includes/utilities/flex';
+@import '_includes/utilities/image';
+@import '_includes/utilities/list';
+@import '_includes/utilities/padding';
+@import '_includes/utilities/display';
+@import '_includes/utilities/indented-text';
+// **********************************************

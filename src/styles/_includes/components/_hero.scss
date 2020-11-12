@@ -1,0 +1,25 @@
+// block [B]
+.hero {
+  width: 100%;
+  background-color: $lightgrey;
+
+  // element [E]
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
+  }
+
+  // element [E]
+  &__block {
+    position: relative;
+
+    // modifier [M]
+    &--text {
+      text-align: center;
+      // color: red;
+    }
+  }
+}

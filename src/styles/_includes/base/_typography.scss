@@ -1,0 +1,88 @@
+h1,
+.h1 {
+  font-family: $proxima;
+  font-weight: 900;
+  font-size: rem(32px);
+  line-height: rem(33px);
+}
+
+h2,
+.h2 {
+  font-family: $proxima;
+  font-weight: 900;
+  font-size: rem(22px);
+  line-height: rem(26px);
+}
+
+h3,
+.h3 {
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: rem(16px);
+  line-height: rem(20px);
+}
+
+h4,
+.h4 {
+  font-family: $roboto;
+  font-weight: 900;
+  font-size: rem(15px);
+  line-height: rem(20px);
+}
+
+h5,
+.h5 {
+  font-family: $roboto;
+  font-weight: bold;
+  font-size: rem(15px);
+  line-height: rem(20px);
+}
+
+h6,
+.h6 {
+  font-family: $roboto;
+  font-weight: 900;
+  font-size: rem(15px);
+  line-height: rem(20px);
+}
+
+p,
+.p {
+  font-family: $roboto;
+  font-weight: 500;
+  font-size: rem(15px);
+  line-height: rem(18px);
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+
+  &:hover {
+    color: $hover;
+  }
+}
+
+small {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: rem(11px);
+  line-height: rem(15px);
+  display: block;
+}
+
+b,
+strong {
+  font-family: $roboto;
+  font-weight: bold;
+}
+
+::selection {
+  background-color: #3c3c3c;
+  color: #fff;
+}

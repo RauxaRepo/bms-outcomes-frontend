@@ -1,0 +1,15 @@
+<section class="content hero bg-color--{{bg_color}}">
+  <div class="hero__bg">
+    <picture>
+      <source data-srcset="{{dtBg}}" media="(min-width: 768px)">
+      <source data-srcset="{{mbBg}}" media="(max-width: 768px)">
+      <img data-object-fit data-src="{{dtBg}}" class="lazy"/>
+    </picture>
+  </div>
+  <div class="container hero__container {{verticalClass}}">
+    <div class="hero__copy">
+      {{{title}}}
+      {{{subtitle}}}
+    </div>
+  </div>
+</section>
