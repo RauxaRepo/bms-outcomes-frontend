@@ -1,56 +1,49 @@
 h1,
 .h1 {
-  font-family: $proxima;
-  font-weight: 900;
-  font-size: rem(32px);
-  line-height: rem(33px);
+  font-weight: 400;
+  font-size: rem(54px);
+  line-height: rem(54px);
 }
 
 h2,
 .h2 {
-  font-family: $proxima;
-  font-weight: 900;
-  font-size: rem(22px);
-  line-height: rem(26px);
+  font-weight: 400;
+  font-size: rem(36px);
+  line-height: rem(38px);
 }
 
 h3,
 .h3 {
-  font-family: $roboto;
-  font-weight: bold;
-  font-size: rem(16px);
-  line-height: rem(20px);
+  font-weight: 400;
+  font-size: rem(22px);
+  line-height: rem(26px);
 }
 
 h4,
 .h4 {
-  font-family: $roboto;
-  font-weight: 900;
-  font-size: rem(15px);
-  line-height: rem(20px);
+  font-weight: 400;
+  font-size: rem(20px);
+  line-height: rem(24px);
 }
 
 h5,
 .h5 {
-  font-family: $roboto;
-  font-weight: bold;
-  font-size: rem(15px);
-  line-height: rem(20px);
+  font-weight: 400;
+  font-size: rem(18px);
+  line-height: rem(22px);
 }
 
 h6,
 .h6 {
-  font-family: $roboto;
-  font-weight: 900;
-  font-size: rem(15px);
-  line-height: rem(20px);
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: rem(18px);
 }
 
 p,
 .p {
-  font-family: $roboto;
-  font-weight: 500;
-  font-size: rem(15px);
+  font-weight: 400;
+  font-size: rem(14px);
   line-height: rem(18px);
 
   a {
@@ -69,8 +62,6 @@ a {
 }
 
 small {
-  font-family: $roboto;
-  font-weight: 400;
   font-size: rem(11px);
   line-height: rem(15px);
   display: block;
@@ -78,7 +69,6 @@ small {
 
 b,
 strong {
-  font-family: $roboto;
   font-weight: bold;
 }
 
