@@ -1,0 +1,45 @@
+.cta {
+  min-width: 114px;
+  min-height: 45px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $rev-light-blue;
+  background-color: $white;
+  transition: all .3s ease;
+  color: $black;
+  font-size: rem(14px);
+  line-height: rem(17px);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 45px 14px 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include colored-arrow-bg('1db1e3');
+    content: "";
+    display: inline-block;
+    width: 27px;
+    height: 16px;
+    position: absolute;
+    right: 10px;
+  }
+
+  &:hover, 
+  &:focus,
+  &:active {
+    background-color: $rev-light-blue;
+    color: $white;
+
+    &::after {
+      @include colored-arrow-bg('ffffff');
+    }
+  }
+
+  &:visited {
+    text-decoration: none;
+  }
+}
