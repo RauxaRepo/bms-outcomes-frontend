@@ -11,7 +11,7 @@ export function jsCompile() {
 
   return gulpMerge(
 
-    src(`${config.js.srcDir}/**/*.js`)
+    src(`${config.js.srcDir}/components/*.js`, `${config.js.srcDir}/helpers/*.js`)
     .pipe(eslint({ configFile: config.eslintConfig}))
     .pipe(eslint.format()),
 
