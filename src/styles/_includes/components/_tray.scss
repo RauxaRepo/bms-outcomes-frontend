@@ -4,7 +4,7 @@
   bottom: 0;
   z-index: 10;
   height: 170px;
-  transition: height ease-in-out 0.3s;
+  transition: height ease-in-out .3s;
   will-change: height;
   background-color: transparent;
 
@@ -32,12 +32,9 @@
       height: 20px;
       width: 20px;
       background-color: transparent;
-      // display: flex;
-      // align-items: center;
-      // justify-content: flex-end;
 
       span {
-        content: "";
+        content: '';
         height: 2px;
         width: 20px;
         background-color: $white;
@@ -68,7 +65,7 @@
       flex: 1;
 
       p,
-      p a{
+      p a {
         font-size: rem(14px);
         line-height: rem(18px);
       }
@@ -154,9 +151,9 @@
       margin-left: 10px;
     }
 
-    &--icon:after,
-    &--icon:before {
-      content: "";
+    &--icon::after,
+    &--icon::before {
+      content: '';
       height: 2px;
       width: 10px;
       background-color: $white;
@@ -166,21 +163,15 @@
       top: 9px;
     }
 
-    &--icon:after {
+    &--icon::after {
       transform: rotate(90deg);
       opacity: 1;
-      transition: opacity ease-in-out 0.3s;
+      transition: opacity ease-in-out .3s;
       will-change: opacity;
     }
 
-    &--icon-expanded:after {
+    &--icon-expanded::after {
       opacity: 0;
-    }
-
-    &--helper {
-      @include media-breakpoint-down(767px) {
-        display: none !important;
-      }
     }
   }
 
@@ -203,26 +194,6 @@
       padding-right: 10px;
       border-top: 1px solid $white;
 
-    }
-
-    &--banner {
-      background-color: rgba(187, 7, 0, 0.85);
-      padding: 7px 20px;
-      position: absolute;
-      width: 100%;
-      display: none;
-
-      @include media-breakpoint-up($lg) {
-        padding-top: 9px;
-        padding-bottom: 9px;
-      }
-
-      > .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-      }
     }
 
     &--copy {
@@ -254,7 +225,6 @@
       h4 {
         font-size: rem(15px);
         line-height: rem(19px);
-        
         letter-spacing: normal;
         margin-bottom: 0;
 
@@ -304,9 +274,9 @@
     &--black-box {
       border: 2px solid $black;
       position: relative;
-      padding-right: 10% !important;
-      padding-left: 20px !important;
-      padding-top: 3px !important;
+      padding-right: 10%;
+      padding-left: 20px;
+      padding-top: 3px;
       margin-bottom: 25px;
 
       > *:last-child {
@@ -337,7 +307,7 @@
   // VARIATIONS
   &--revpat {
     .brand-color {
-      color: color(rev, navy) !important;
+      color: $rev-dark-blue;
     }
 
     .tray__block--header {
@@ -349,7 +319,7 @@
         color: $rev-blue;
 
         &:hover {
-          color: color(rev, alt-8);
+          color: $rev-light-blue;
         }
       }
     }
@@ -374,7 +344,7 @@
       &:active,
       &:focus {
         outline: 0;
-        background-color: color(rev, navy);
+        background-color: $rev-dark-blue;
       }
     }
   }
@@ -402,8 +372,8 @@
       }
 
       &--prescribing {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        // scrollbar-width: none;
+        // -ms-overflow-style: none;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
@@ -417,8 +387,8 @@
     }
 
     &__aside {
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      // scrollbar-width: none;
+      // -ms-overflow-style: none;
 
       &::-webkit-scrollbar {
         width: 0;
@@ -447,16 +417,16 @@
         display: flex;
 
         &:focus.focus-visible {
-          color: #CCC;
+          color: #ccc;
           background-color: transparent;
 
           .tray__span--icon {
-            border-color: #CCC;
+            border-color: #ccc;
           }
 
           .tray__span--icon::before,
           .tray__span--icon::after {
-            background-color: #CCC;
+            background-color: #ccc;
           }
         }
       }
