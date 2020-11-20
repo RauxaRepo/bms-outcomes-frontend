@@ -4,13 +4,29 @@
 {{>head}}
 
 <body class="js-body">
-  {{>header}}
-  <main class="js-main">
-    <a href="#" class="cta">
-      Start
-    </a>
+  <!-- {{>header}} -->
+  <main class="main main--home js-main">
+    <section class="content">
+      {{>indication}}
+      <div class="content__container">
+        <h1>Bringing<br>Outcomes<br>to Life</h1>
+        <h5>Explore the potential of REVLIMID<br> maintenance post auto-HSCT</h5>
+      </div>
+      {{>footer}}
+    </section>
+    <aside class="aside">
+      <div class="aside__container">
+        <a href="#" class="cta">
+          Start
+        </a>
+      </div>
+    </aside>
   </main>
-  {{>footer}}
+  {{>tray
+    variant='revpat'
+    secondTab='Medication Guide'
+  }}
+  {{>footlibs}}
 </body>
 
 </html>
