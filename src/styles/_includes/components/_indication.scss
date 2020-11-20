@@ -1,0 +1,88 @@
+.indication {
+  background-color: #035888;
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 23px 18px 22px 50px;
+  }
+
+  &__content {
+    color: $white;
+    max-width: 693px;
+
+    * > *,
+    * {
+      color: $white;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__tools {
+    width: 67px;
+    text-align: right;
+  }
+
+  &__close {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    appearance: none;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    text-indent: -99999999px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 0;
+
+      &::before,
+      &::after {
+        background-color: $rev-yellow;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      width: 2px;
+      height: 25px;
+      background-color: $white;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 11px;
+      transition: background-color .3s ease;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  &--visible {
+    visibility: visible;
+  }
+}

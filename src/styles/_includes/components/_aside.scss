@@ -1,0 +1,23 @@
+.aside {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-image: url('../images/aside-bg.jpg');
+  background-size: 132px;
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .cta {
+      align-self: center;
+    }
+  }
+}
