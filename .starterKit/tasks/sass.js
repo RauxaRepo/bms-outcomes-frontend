@@ -28,7 +28,8 @@ export function sassCompile(){
       `${config.styles.scssDir}/_includes/globals/*.scss`,
       `${config.styles.scssDir}/_includes/themes/*.scss`,
       `${config.styles.scssDir}/_includes/utilities/*.scss`,
-      `${config.styles.scssDir}/_includes/layout/*.scss`])
+      `${config.styles.scssDir}/_includes/layout/*.scss`,
+      `${config.styles.scssDir}/style.scss`])
     .pipe(sasslint({
         rules: {
           'property-sort-order': 0,
