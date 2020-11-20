@@ -15,6 +15,7 @@
   text-transform: uppercase;
   display: inline-block;
   position: relative;
+  appearance: none;
 
   &::after {
     background-size: contain;
@@ -33,6 +34,7 @@
   &:active {
     background-color: $rev-light-blue;
     color: $white;
+    outline: 0;
 
     &::after {
       @include colored-arrow-bg('ffffff');
