@@ -29,6 +29,7 @@ export function sassCompile(){
       `${config.styles.scssDir}/_includes/themes/*.scss`,
       `${config.styles.scssDir}/_includes/utilities/*.scss`,
       `${config.styles.scssDir}/_includes/layout/*.scss`,
+      `${config.styles.scssDir}/_includes/pages/*.scss`,
       `${config.styles.scssDir}/style.scss`])
     .pipe(sasslint({
         rules: {
