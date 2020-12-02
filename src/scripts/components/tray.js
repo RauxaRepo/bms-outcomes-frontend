@@ -10,14 +10,13 @@ const tabButtons = [...trayEl.getElementsByClassName('js-tab-select')];
 const scrollBuffer = 15;
 const initialScrollPos = window.pageYOffset;
 let trayHeight = 63;
+const body = document.querySelector('.js-body');
 
 // ************************************************
 // set bottom of document buffer dead space
 // to account for tray's fixed posiition
 // ************************************************
 const bottomOffset = () => {
-  const body = document.querySelector('.js-body');
-
   body.style.paddingBottom = `${trayHeight}px`;
 };
 
@@ -30,7 +29,7 @@ export const setExpandedTrayHeight = () => {
   const w = window;
   const windowHeight = w.innerHeight;
 
-  trayEl.style.height = `${windowHeight}px`;
+  trayEl.style.height = `${windowHeight - 78}px`;
 
   trayContent.style.height = `calc(100% - ${trayHeader.offsetHeight }px)`;
 };
@@ -85,6 +84,7 @@ export const toggleTray = () => {
     window.removeEventListener('resize', setExpandedTrayHeight);
 
     trayEl.classList.remove('js-tray-expanded');
+    body.classList.remove('tray--expanded');
   } else {
     document.removeEventListener('scroll', minimizeTray);
 
@@ -92,6 +92,7 @@ export const toggleTray = () => {
     enableScrollLock(trayContent);
     icon.classList.add('tray__span--icon-expanded');
     trayEl.classList.add('js-tray-expanded');
+    body.classList.add('tray--expanded');
     trayContent.scrollTop = 0;
 
     if (hiddenContent) {
