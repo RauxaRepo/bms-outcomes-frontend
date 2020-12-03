@@ -1,0 +1,137 @@
+.error-overlay {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 195px;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  background-color: $rev-blue;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: scroll;
+
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: $site-mobile-width;
+
+  }
+
+  &__block {
+    h1 {
+      color: $white;
+      margin-bottom: 25px;
+    }
+
+    h5 {
+      color: $white;
+      margin-bottom: 0;
+      margin-top: 25%;
+      font-size: 1.53rem;
+      line-height: 1.3em;
+    }
+
+    &--portrait {
+      display: none;
+
+      h5 {
+        margin-top: 0;
+        width: 13em;
+      }
+    }
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10em;
+    margin-bottom: 6em;
+    justify-content: center;
+
+    img {
+      margin-right: 10px;
+      height: 177px;
+      width: 200px;
+      // margin-left: 4em;
+    }
+
+    h5 {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  &__footer {
+    padding: 40px 50px 20px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    bottom: 0;
+
+    &-content {
+      padding-left: 0;
+      color: $white;
+      max-width: 473px;
+      box-sizing: content-box;
+
+      *,
+      * > * {
+        color: $white;
+      }
+
+      > *:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-logo {
+      img {
+        max-width: 158px;
+        height: auto;
+      }
+    }
+  }
+
+  // desktop
+  @media screen and (min-width: 640px) and (min-height: 1025px) and (orientation: portrait) {
+    display: flex;
+
+    &__container {
+      max-width: $site-content-width;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &__block--mobile {
+      display: none;
+    }
+
+    &__block--portrait {
+      display: block;
+    }
+
+    &__footer {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    &__footer-logo {
+      padding-right: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
