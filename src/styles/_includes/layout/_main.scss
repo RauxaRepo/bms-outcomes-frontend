@@ -9,6 +9,9 @@
   grid-column-gap: 0;
   grid-row-gap: 0;
 
+  @media screen and (max-width: ($site-content-width - 1)) {
+    display: none;
+  }
 
   &--home {
     h1 {
