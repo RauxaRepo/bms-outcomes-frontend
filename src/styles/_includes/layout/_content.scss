@@ -1,12 +1,17 @@
 .content {
   position: relative;
-  grid-area: 1 / 1 / 2 / 2;
+  // grid-area: 1 / 1 / 2 / 2;
   background-color: $rev-blue;
+  flex-basis: 75%;
+  min-width: 828px;
 
   &__container {
     padding-top: 30px;
     padding-bottom: 40px;
     padding-left: 50px;
     padding-right: 50px;
+    max-width: 828px;
+    box-sizing: border-box;
+    margin-left: auto;
   }
 }

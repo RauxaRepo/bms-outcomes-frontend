@@ -24,12 +24,17 @@
 
 // COMPONENTS
 @import '_includes/components/banner';
+@import '_includes/components/drawer';
 @import '_includes/components/header';
 @import '_includes/components/footer';
 @import '_includes/components/hero';
 @import '_includes/components/aside';
 @import '_includes/components/indication';
 @import '_includes/components/tray';
+// **********************************************
+
+// PAGES
+@import '_includes/pages/home';
 // **********************************************
 
 // UTILITIES 
