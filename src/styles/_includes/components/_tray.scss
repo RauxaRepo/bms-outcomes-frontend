@@ -8,10 +8,6 @@
   will-change: height;
   background-color: transparent;
 
-  @media screen and (max-width: $site-content-width - 1) {
-    display: none;
-  }
-
   &__container {
     position: relative;
     height: 100%;
