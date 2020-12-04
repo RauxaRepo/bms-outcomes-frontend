@@ -107,7 +107,7 @@
   }
 
   // desktop
-  @media screen and (min-width: 640px) and (min-height: 1024px) and (orientation: portrait) {
+  @media screen and (min-width: 640px) and (min-height: $site-content-width) and (orientation: portrait) {
     display: flex;
 
     &__container {
@@ -133,13 +133,15 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $site-content-width) {
     display: none;
   }
 }
 
 @media screen and (max-width: $site-content-width - 1) {
-  .tray, .header, .main {
+  .tray,
+  .header,
+  .main {
     display: none;
   }
 }
