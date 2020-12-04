@@ -58,13 +58,12 @@
     flex-direction: row;
     margin-top: 10em;
     margin-bottom: 6em;
-    justify-content: center;
 
     img {
       margin-right: 10px;
       height: 177px;
       width: 200px;
-      // margin-left: 4em;
+      margin-left: 4em;
     }
 
     h5 {
@@ -108,7 +107,7 @@
   }
 
   // desktop
-  @media screen and (min-width: 640px) and (min-height: 1025px) and (orientation: portrait) {
+  @media screen and (min-width: 640px) and (min-height: $site-content-width) and (orientation: portrait) {
     display: flex;
 
     &__container {
@@ -126,8 +125,7 @@
     }
 
     &__footer {
-      flex-direction: row;
-      align-items: flex-end;
+      flex-direction: column;
     }
 
     &__footer-logo {
@@ -135,7 +133,15 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $site-content-width) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $site-content-width - 1) {
+  .tray,
+  .header,
+  .main {
     display: none;
   }
 }
