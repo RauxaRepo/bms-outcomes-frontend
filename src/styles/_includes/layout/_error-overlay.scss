@@ -129,7 +129,8 @@
     }
 
     &__footer {
-      flex-direction: column;
+      flex-direction: row;
+      align-items: flex-end;
     }
 
     &__footer-logo {
