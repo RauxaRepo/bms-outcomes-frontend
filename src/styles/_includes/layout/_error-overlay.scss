@@ -96,6 +96,10 @@
       > *:first-child {
         margin-top: 0;
       }
+
+      small {
+        padding-top: 30px;
+      }
     }
 
     &-logo {
@@ -125,7 +129,8 @@
     }
 
     &__footer {
-      flex-direction: column;
+      flex-direction: row;
+      align-items: flex-end;
     }
 
     &__footer-logo {
