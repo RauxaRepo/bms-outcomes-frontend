@@ -357,7 +357,7 @@
       &--prescribing {
         // scrollbar-width: none;
         // -ms-overflow-style: none;
-        max-width: $site-content-width;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
         padding: 0;
@@ -497,7 +497,7 @@
       }
 
       &--prescribing {
-        max-width: $site-content-width;
+        // max-width: $site-content-width;
         margin-left: auto;
         margin-right: auto;
         padding: 0;
@@ -535,7 +535,7 @@
       }
 
       &--prescribing {
-        max-width: $site-content-width;
+        // max-width: $site-content-width;
         margin-left: auto;
         margin-right: auto;
         padding: 0;

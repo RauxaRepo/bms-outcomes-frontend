@@ -9,6 +9,7 @@ import lazyload from './components/lazyload';
 import indicationsInit from './components/indications';
 import tray from './components/tray';
 import header from './components/header';
+import modal from './components/modal';
 
 // on dom ready.
 domReady(() => {
@@ -16,4 +17,5 @@ domReady(() => {
   indicationsInit();
   tray();
   header.init();
+  modal.init();
 });

@@ -42,7 +42,7 @@
             <hr/>
             <ul>
               <li>
-                <a href="#" target="_blank">Recommended starting dose</a>
+                <a href="#starting-dose">Recommended starting dose</a>
               </li>
               <li>
                 <a href="#" target="_blank">Patient Education Brochure</a>
@@ -402,16 +402,30 @@
       </div>
       <div class="tray__block tray__block--body js-tray-tab" style="display:none;" data-tab="2">
         <div class="tray__block tray__block--prescribing">
-          <div class="tray__block tray__block--pdf js-pdf-tab" data-pdf-url="../../../assets/images/pi_revlimid.pdf" data-pdf-viewer="scripts/pdfjs/web/viewer.html"></div>
+          <div class="tray__block tray__block--pdf js-pdf-tab" data-pdf-url="../../../assets/images/pi_revlimid.pdf"></div>
         </div>
       </div>
       <div class="tray__block tray__block--body js-tray-tab" style="display:none;" data-tab="3">
         <div class="tray__block tray__block--prescribing">
-          <div class="tray__block tray__block--pdf js-pdf-tab" data-pdf-url="../../../assets/images/REVLIMID-Medication-Guide-1019.pdf" data-pdf-viewer="scripts/pdfjs/web/viewer.html"></div>
+          <div class="tray__block tray__block--pdf js-pdf-tab" data-pdf-url="../../../assets/images/REVLIMID-Medication-Guide-1019.pdf"></div>
         </div>
       </div>
     </div>
   </section>
+  <section class="modal js-modal" id="starting-dose" role="dialog" style="background-color: #dbebf4;">
+    <div class="container modal__container">
+      <div class="modal__block">
+        <div class="modal__block modal__block--inner">
+          <div class="modal__block modal__block--close">
+            <button class="modal__button modal__button--close js-modal-close" type="button" name="button">
+              <span class="modal__span"></span>
+            </button>
+          </div>
+          <div class="modal__block modal__block--pdf js-modal-pdf" data-pdf-url="../../../assets/images/Patient-Support.pdf"></div>
+        </div>
+      </div>
+    </div>
+  </section>  <input class="js-pdf-viewer-url" type="hidden" value="scripts/pdfjs/web/viewer.html">
   <script src="assets/js/script.js"></script>
   <div class="error-overlay">
     <div class="error-overlay__container">
