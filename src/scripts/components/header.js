@@ -29,6 +29,11 @@ const header = {
       });
     });
   },
+  drawerClose: () => {
+    jQuery(() => {
+      jQuery('.js-body').drawer('close');
+    });
+  },
   init: () => {
     const headerEl = document.querySelector(`.${header.CONFIG.classes.js}`);
 
