@@ -42,6 +42,7 @@ const minimizeTray = () => {
     || window.pageYOffset < (initialScrollPos - scrollBuffer)) {
     // dock tray, refresh offset
     trayEl.style.height = `${trayHeight}px`;
+    trayEl.classList.add('js-tray-minified');
     document.removeEventListener('scroll', minimizeTray);
   }
 };
@@ -85,6 +86,7 @@ export const toggleTray = () => {
 
     trayEl.classList.remove('js-tray-expanded');
     body.classList.remove('tray--expanded');
+    trayEl.classList.add('js-tray-minified');
   } else {
     document.removeEventListener('scroll', minimizeTray);
 
@@ -93,6 +95,7 @@ export const toggleTray = () => {
     icon.classList.add('tray__span--icon-expanded');
     trayEl.classList.add('js-tray-expanded');
     body.classList.add('tray--expanded');
+    trayEl.classList.remove('js-tray-minified');
     trayContent.scrollTop = 0;
 
     if (hiddenContent) {
@@ -163,10 +166,15 @@ const trayScrollEvents = () => {
 // render pdf document and init the plugin
 // ************************************************
 const pdfRender = (page = 1, pdfUrl) => {
-  const container = trayEl.querySelector('.js-pdf-container');
-  let pdfViewerUrl = pdfUrl.getAttribute('data-pdf-viewer');
-  let pdfUrlValue = pdfUrl.getAttribute('data-pdf-url');
+  const container = pdfUrl.querySelector('.js-pdf-container');
 
+  if (container) {
+    return;
+  }
+
+  const pdfViewerUrl = document.querySelector('.js-pdf-viewer-url').getAttribute('value');
+  const pdfUrlValue = pdfUrl.getAttribute('data-pdf-url');
+  const pdfContainer = document.createElement('div');
   const options = {
     assumptionMode: true,
     pdfOpenParams: {
@@ -181,15 +189,8 @@ const pdfRender = (page = 1, pdfUrl) => {
     PDFJS_URL: pdfViewerUrl,
   };
 
-  if (container) {
-    container.remove();
-  }
-
-  const pdfContainer = document.createElement('div');
   pdfContainer.classList.add('tray__block', 'tray__block--pdf-inner', 'js-pdf-container');
-
   pdfUrl.appendChild(pdfContainer);
-
   PDFObject.embed(pdfUrlValue, pdfContainer, options);
 };
 
