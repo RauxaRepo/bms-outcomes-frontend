@@ -3,7 +3,8 @@ import debounce from '../helpers/debounce';
 import { enableScrollLock, disableScrollLock } from '../helpers/scrollLock';
 
 const trayEl = document.querySelector('.js-tray');
-const trayContent = trayEl.querySelector('.js-tray-content');
+// const trayContent = trayEl.querySelector('.js-tray-content');
+const trayIsiContent = trayEl.querySelector('.js-tray-tab[data-tab="1"]');
 const trayDefaultTab = trayEl.querySelector('.js-tab-default');
 const tabs = [...trayEl.getElementsByClassName('js-tray-tab')];
 const tabButtons = [...trayEl.getElementsByClassName('js-tab-select')];
@@ -31,7 +32,7 @@ export const setExpandedTrayHeight = () => {
 
   trayEl.style.height = `${windowHeight - 78}px`;
 
-  trayContent.style.height = `calc(100% - ${trayHeader.offsetHeight }px)`;
+  trayIsiContent.style.height = `calc(100% - ${trayHeader.offsetHeight }px)`;
 };
 
 // ************************************************
@@ -72,11 +73,11 @@ export const toggleTray = () => {
     });
 
     trayDefaultTab.style.display = 'block';
-    disableScrollLock(trayContent);
+    disableScrollLock(trayIsiContent);
     defaultButton.classList.add('tray__button--active');
     icon.classList.remove('tray__span--icon-expanded');
 
-    trayContent.scrollTop = 0;
+    trayIsiContent.scrollTop = 0;
 
     if (hiddenContent) {
       hiddenContent.style.display = 'none';
@@ -91,12 +92,12 @@ export const toggleTray = () => {
     document.removeEventListener('scroll', minimizeTray);
 
     setExpandedTrayHeight();
-    enableScrollLock(trayContent);
+    enableScrollLock(trayIsiContent);
     icon.classList.add('tray__span--icon-expanded');
     trayEl.classList.add('js-tray-expanded');
     body.classList.add('tray--expanded');
     trayEl.classList.remove('js-tray-minified');
-    trayContent.scrollTop = 0;
+    trayIsiContent.scrollTop = 0;
 
     if (hiddenContent) {
       hiddenContent.style.display = 'block';
