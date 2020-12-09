@@ -9,6 +9,7 @@
 @import '_includes/base/resets';
 @import '_includes/base/typography';
 @import '_includes/base/buttons';
+@import '_includes/utilities/close-icon';
 // **********************************************
 
 // LAYOUT
@@ -31,6 +32,7 @@
 @import '_includes/components/aside';
 @import '_includes/components/indication';
 @import '_includes/components/tray';
+@import '_includes/components/modal';
 // **********************************************
 
 // PAGES
