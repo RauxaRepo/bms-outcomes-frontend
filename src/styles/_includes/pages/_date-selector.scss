@@ -1,0 +1,45 @@
+.date-selector {
+    .main {
+        h1 {
+          color: $white;
+          margin-bottom: 25px;
+          font-size: 3rem;
+        }
+    }
+
+    .content {
+        position: relative;
+        background-color: $rev-blue;
+        flex-basis: 25%;
+        min-width: initial;
+        
+        &__container {
+            padding-top: 30px;
+            padding-bottom: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+            max-width: 828px;
+            box-sizing: border-box;
+            margin-left: auto;
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 9rem;
+        margin-left: 2rem;
+    }
+
+    .aside {
+        max-width: initial;
+        flex-basis: 75%;
+      
+        &__container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          padding-bottom: 9rem;
+        }
+    }
+}

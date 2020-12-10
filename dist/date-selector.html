@@ -14,7 +14,7 @@
   <title>BMS Outcomes</title>
   <link type="text/css" href="assets/css/style.css" rel="stylesheet">
 </head>
-<body class="js-body home">
+<body class="js-body date-selector">
   <header class="header js-header" role="banner">
     <div class="container header__container">
       <div class="header__block">
@@ -99,40 +99,72 @@
     </nav>
   </header>  <main class="main js-main">
     <section class="content">
-      <div class="indication js-indication">
-        <div class="indication__container">
-          <div class="indication__content">
-            <small>REVLIMID<sup>®</sup> (lenalidomide) in combination with dexamethasone (dex) is indicated for the treatment of adult patients with multiple myeloma (MM). REVLIMID is indicated as maintenance therapy in adult patients with MM following autologous hematopoietic stem cell transplantation (auto-HSCT). REVLIMID is not indicated and is not recommended for the treatment of patients with chronic lymphocytic leukemia (CLL) outside of controlled clinical trials.<br><br>To avoid embryo-fetal exposure to lenalidomide, REVLIMID is only available through a restricted distribution program, the REVLIMID REMS<sup>®</sup> program.</small>
-          </div>
-          <div class="indication__tools">
-            <button class="indication__close js-indication-close">close</button>
-          </div>
-        </div>
-      </div>      <div class="content__container">
+      <div class="content__container">
         <h1>Bringing<br>Outcomes<br>to Life</h1>
-        <h5>Explore the potential of REVLIMID<br> maintenance post auto-HSCT</h5>
       </div>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__logo">
             <img src="./assets/images/rev-logo.png" alt="">
           </div>
-          <div class="footer__content">
-            <p>Please see Important Safety Information and full Prescribing Information, including Boxed WARNINGS, for
-              REVLIMID in the tray below.</p>
-            <small>Auto-HSCT, autologous hematopoietic stem cell transplant.
-              <br><br>
-              REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
-              ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
-          </div>
         </div>
-      </footer>    </section>
+      </footer>
+    </section>
     <aside class="aside">
       <div class="aside__container">
-        <a href="date-selector.html" class="cta">
-          Start
-        </a>
-      </div>
+       <div class="date-selector js-date-selector">
+         <div class="date-selector__container">
+           <div>
+               <h5>
+                   Pick a start date for REVLIMID<br>
+                   maintenance therapy post auto-HSCT
+               </h5>
+           </div>
+           <div class="date-picker">
+               <select class="month" name="month" id="js-select-month">
+                   <option value="">MONTH</option>
+                   <option value="1">JANUARY</option>
+                   <option value="2">FEBRUARY</option>
+                   <option value="3">MARCH</option>
+                   <option value="4">APRIL</option>
+                   <option value="5">MAY</option>
+                   <option value="6">JUNE</option>
+                   <option value="7">JULY</option>
+                   <option value="8">AUGUST</option>
+                   <option value="9">SEPTEMBER</option>
+                   <option value="10">OCTOBER</option>
+                   <option value="11">NOVEMBER</option>
+                   <option value="12">DECEMBER</option>
+               </select>
+               <select class="year" name="year" id="js-select-year">
+                   <option value="">YEAR</option>
+                   <option value="2020">2020</option>
+                   <option value="2021">2021</option>
+                   <option value="2022">2022</option>
+                   <option value="2023">2023</option>
+                   <option value="2024">2024</option>
+                   <option value="2025">2025</option>
+                   <option value="2026">2026</option>
+                   <option value="2027">2027</option>
+                   <option value="2028">2028</option>
+                   <option value="2029">2029</option>
+               </select>
+               <a href="date-selector.html" class="cta js-next">
+                   NEXT
+               </a>
+           </div>
+         </div>
+         <div class="date-selector__footer">
+           <div class="date-selector__footer-content">
+               <small>
+                   Auto-HSCT, autolous hematopoietic stem cell transplant.
+               </small>
+               <small>
+               REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
+               ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
+           </div>
+         </div>
+       </div>      </div>
     </aside>
   </main>
   <!-- TRAY COMPONENT -->

@@ -3,22 +3,24 @@
 
 {{>head}}
 
-<body class="js-body home">
+<body class="js-body date-selector">
   {{>header}}
   <main class="main js-main">
     <section class="content">
-      {{>indication}}
       <div class="content__container">
         <h1>Bringing<br>Outcomes<br>to Life</h1>
-        <h5>Explore the potential of REVLIMID<br> maintenance post auto-HSCT</h5>
       </div>
-      {{>footer}}
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__logo">
+            <img src="./assets/images/rev-logo.png" alt="">
+          </div>
+        </div>
+      </footer>
     </section>
     <aside class="aside">
       <div class="aside__container">
-        <a href="date-selector.html" class="cta">
-          Start
-        </a>
+       {{>date-selector}}
       </div>
     </aside>
   </main>
