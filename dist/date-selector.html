@@ -98,8 +98,8 @@
       </div>
     </nav>
   </header>  <main class="main js-main">
-    <section class="content">
-      <div class="content__container">
+    <section class="aside">
+      <div class="aside__container">
         <h1>Bringing<br>Outcomes<br>to Life</h1>
       </div>
       <footer class="footer">
@@ -110,45 +110,59 @@
         </div>
       </footer>
     </section>
-    <aside class="aside">
-      <div class="aside__container">
+    <aside class="content">
+      <div class="content__container">
        <div class="date-selector js-date-selector">
          <div class="date-selector__container">
            <div>
-               <h5>
-                   Pick a start date for REVLIMID<br>
-                   maintenance therapy post auto-HSCT
-               </h5>
+             <h5>
+               Pick a start date for REVLIMID<br>
+               maintenance therapy post auto-HSCT
+             </h5>
            </div>
-           <div class="date-picker">
-               <select class="month" name="month" id="js-select-month">
-                   <option value="">MONTH</option>
-                   <option value="1">JANUARY</option>
-                   <option value="2">FEBRUARY</option>
-                   <option value="3">MARCH</option>
-                   <option value="4">APRIL</option>
-                   <option value="5">MAY</option>
-                   <option value="6">JUNE</option>
-                   <option value="7">JULY</option>
-                   <option value="8">AUGUST</option>
-                   <option value="9">SEPTEMBER</option>
-                   <option value="10">OCTOBER</option>
-                   <option value="11">NOVEMBER</option>
-                   <option value="12">DECEMBER</option>
-               </select>
-               <select class="year" name="year" id="js-select-year">
-                   <option value="">YEAR</option>
-                   <option value="2020">2020</option>
-                   <option value="2021">2021</option>
-                   <option value="2022">2022</option>
-                   <option value="2023">2023</option>
-                   <option value="2024">2024</option>
-                   <option value="2025">2025</option>
-                   <option value="2026">2026</option>
-                   <option value="2027">2027</option>
-                   <option value="2028">2028</option>
-                   <option value="2029">2029</option>
-               </select>
+           <div class="layout--aside-left">
+               <div class="custom-select-month">
+                   <div class="custom-select-month">
+                       <div class="custom-select-month__trigger"><span>JANUARY</span>
+                           <div class="arrow"></div>
+                       </div>
+                       <div class="custom-options-month">
+                           <span class="custom-option selected" data-value="1">JANUARY</span>
+                           <span class="custom-option" data-value="2">FEBRUARY</span>
+                           <span class="custom-option" data-value="3">MARCH</span>
+                           <span class="custom-option" data-value="4">APRIL</span>
+                           <span class="custom-option" data-value="5">MAY</span>
+                           <span class="custom-option" data-value="6">JUNE</span>
+                           <span class="custom-option" data-value="7">JULY</span>
+                           <span class="custom-option" data-value="8">AUGUST</span>
+                           <span class="custom-option" data-value="9">SEPTEMBER</span>
+                           <span class="custom-option" data-value="10">OCTOBER</span>
+                           <span class="custom-option" data-value="11">NOVEMBER</span>
+                           <span class="custom-option" data-value="12">DECEMBER</span>
+                       </div>
+                   </div>
+               </div>
+               <div class="custom-select-year">
+                   <div class="custom-select-year">
+                       <div class="custom-select-year__trigger"><span>2020</span>
+                           <div class="arrow"></div>
+                       </div>
+                       <div class="custom-options-year">
+                           <span class="custom-option selected" data-value="2020">2020</span>
+                           <span class="custom-option" data-value="2021">2021</span>
+                           <span class="custom-option" data-value="2022">2022</span>
+                           <span class="custom-option" data-value="2023">2023</span>
+                           <span class="custom-option" data-value="2024">2024</span>
+                           <span class="custom-option" data-value="2025">2025</span>
+                           <span class="custom-option" data-value="2026">2026</span>
+                           <span class="custom-option" data-value="2027">2027</span>
+                           <span class="custom-option" data-value="2028">2028</span>
+                           <span class="custom-option" data-value="2029">2029</span>
+                           <span class="custom-option" data-value="2030">2030</span>
+                           <span class="custom-option" data-value="2031">2031</span>
+                       </div>
+                   </div>
+               </div>
                <a href="date-selector.html" class="cta js-next">
                    NEXT
                </a>

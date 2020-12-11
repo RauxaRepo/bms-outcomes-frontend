@@ -1,45 +1,56 @@
 .date-selector {
-    .main {
-        h1 {
-          color: $white;
-          margin-bottom: 25px;
-          font-size: 3rem;
-        }
-    }
+  .main {
+    min-height: 92vh;
 
-    .content {
-        position: relative;
-        background-color: $rev-blue;
-        flex-basis: 25%;
-        min-width: initial;
-        
-        &__container {
-            padding-top: 30px;
-            padding-bottom: 40px;
-            padding-left: 50px;
-            padding-right: 50px;
-            max-width: 828px;
-            box-sizing: border-box;
-            margin-left: auto;
-        }
+    h1 {
+      color: $white;
+      margin-bottom: 25px;
+      font-size: 3rem;
+      margin-top: 0.5rem;
     }
+  }
 
-    .footer {
-        position: absolute;
-        bottom: 9rem;
-        margin-left: 2rem;
-    }
+  .aside {
+    position: relative;
+    background-color: $rev-blue;
+    justify-content: initial;
+    min-width: initial;
+    background-image: none;
 
-    .aside {
-        max-width: initial;
-        flex-basis: 75%;
-      
-        &__container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-content: center;
-          padding-bottom: 9rem;
-        }
+    &__container {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      padding-left: 50px;
+      padding-right: 50px;
+      max-width: 828px;
+      box-sizing: border-box;
+      margin-left: auto;
     }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: 2rem;
+  }
+
+  .content {
+    max-width: initial;
+    justify-content: center;
+    background-color: initial;
+    min-width: initial;
+    background-image: url('../images/aside-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      padding-bottom: 9rem;
+      margin-left: inherit;
+    }
+  }
 }
