@@ -88,14 +88,30 @@ const dateSelector = {
     const targetLocation = e.target.getAttribute('href'); 
     const elemMonth = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-option.custom-select__option--selected`);
     const elemYear = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-option.custom-select__option--selected`);
-    const { year } = elemYear.dataset;
-    let { month } = elemMonth.dataset;
-    month = parseInt(month, 0) - 1;
-    month = month.toString().padStart(2, '0');
+    const currTherapyStart = JSON.parse(sessionStorage.getItem('therapyStart'));
+    const currTherapyStartDate = new Date(currTherapyStart.fullDate);
 
-    const therapyStartFullDate = new Date(year, month, 1);
+    if (elemYear) {
+      const { year } = elemYear.dataset;
+      currTherapyStartDate.setFullYear(year);
+      const newTherapyStartFullDate = new Date(currTherapyStartDate);
+  
+      dateSelector.setStartAndProgDate(newTherapyStartFullDate);
+      sessionStorage.setItem('isDefaultStartDate', 0);
+    }
 
-    dateSelector.setStartAndProgDate(therapyStartFullDate);
+    if (elemMonth) {
+      let { month } = elemMonth.dataset;
+      month = parseInt(month, 0) - 1;
+      month = month.toString().padStart(2, '0');
+
+      currTherapyStartDate.setMonth(month);
+      const newTherapyStartFullDate = new Date(currTherapyStartDate);
+  
+      dateSelector.setStartAndProgDate(newTherapyStartFullDate);
+      sessionStorage.setItem('isDefaultStartDate', 0);
+    }
+
     document.location.href = targetLocation;
   },
   setStartAndProgDate: (startDate) => {
@@ -169,12 +185,20 @@ const dateSelector = {
     }
   },
   setDropdownValuesOnLoad: () => {
+    const isDefaultStartDate = parseInt(sessionStorage.getItem('isDefaultStartDate'), 0);
+    const yearSelectLabel = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-label`);
+    const monthSelectLabel = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-label`);
+
+    if (isDefaultStartDate === 1) {
+      monthSelectLabel.innerHTML = 'month';
+      yearSelectLabel.innerHTML = 'year';
+
+      return;
+    }
+
     const therapyStart = JSON.parse(sessionStorage.getItem('therapyStart'));
     let { month } = therapyStart;
     const { year } = therapyStart;
-
-    const yearSelectLabel = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-label`);
-    const monthSelectLabel = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-label`);
     const monthOptionThatMatchesDate = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-option[data-month="${month}"]`);
     const yearOptionThatMatchesDate = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-option[data-year="${year}"]`);
 
@@ -218,6 +242,7 @@ const dateSelector = {
     // if the user has not set start date on the session, we set it to present time
     if (!therapyStart && !progressionEnd) {
       dateSelector.setStartAndProgDate(presentDate);
+      sessionStorage.setItem('isDefaultStartDate', 1);
     }
 
     dateSelector.outputValues();
