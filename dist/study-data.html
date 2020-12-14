@@ -14,7 +14,7 @@
   <title>BMS Outcomes</title>
   <link type="text/css" href="assets/css/style.css" rel="stylesheet">
 </head>
-<body class="js-body date-selector">
+<body class="js-body template-2">
   <header class="header js-header" role="banner">
     <div class="container header__container">
       <div class="header__block">
@@ -98,88 +98,56 @@
       </div>
     </nav>
   </header>  <main class="main js-main">
-    <section class="aside">
+    <aside class="aside">
       <div class="aside__container">
-        <h1>Bringing<br>Outcomes<br>to Life</h1>
+        <h6><strong class="text-yellow">Start Maintenance Rx:</strong></h6>
+        <h4 class="js-print-therapy-start"></h4>
+        <h6><strong class="text-yellow">Potential<br> progression date:</strong></h6>
+        <h4 class="js-print-prog-end"></h4>
+        <div class="aside__footer">
+          <div class="aside__logo">
+            <a href="./index.html">
+              <img src="./assets/images/rev-logo.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section class="content">
+      <nav class="navigation">
+        <div class="navigation__container">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="./index.html">Home</a>
+            </li>
+            <li class="navigation__item ">
+              <a href="./start-date.html">Start Date</a>
+            </li>
+            <li class="navigation__item navigation__item--active">
+              <a href="./study-data.html">Pivotal Study Data</a>
+            </li>
+            <li class="navigation__item ">
+              <a href="#">REVLIMID Maintenance</a>
+            </li>
+            <li class="navigation__item ">
+              <a href="#">Additional Resources</a>
+            </li>
+          </ul>
+        </div>
+      </nav>      <div class="content__container">
+        <h3>Patient has the potential to live progression free until <span class="js-print-prog-end-alt"></span></h3>
       </div>
       <footer class="footer">
         <div class="footer__container">
-          <div class="footer__logo">
-            <img src="./assets/images/rev-logo.png" alt="">
+          <div class="footer__content">
+            <small>Auto-HSCT, autologous hematopoietic stem cell transplant.
+              <br><br>
+              REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
+              ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
           </div>
         </div>
       </footer>
     </section>
-    <aside class="content">
-      <div class="content__container">
-       <div class="date-selector js-date-selector">
-         <div class="date-selector__container">
-           <div>
-             <h5>
-               Pick a start date for REVLIMID<br>
-               maintenance therapy post auto-HSCT
-             </h5>
-           </div>
-           <div class="layout--aside-left">
-               <div class="custom-select-month">
-                   <div class="custom-select-month">
-                       <div class="custom-select-month__trigger"><span>JANUARY</span>
-                           <div class="arrow"></div>
-                       </div>
-                       <div class="custom-options-month">
-                           <span class="custom-option selected" data-value="1">JANUARY</span>
-                           <span class="custom-option" data-value="2">FEBRUARY</span>
-                           <span class="custom-option" data-value="3">MARCH</span>
-                           <span class="custom-option" data-value="4">APRIL</span>
-                           <span class="custom-option" data-value="5">MAY</span>
-                           <span class="custom-option" data-value="6">JUNE</span>
-                           <span class="custom-option" data-value="7">JULY</span>
-                           <span class="custom-option" data-value="8">AUGUST</span>
-                           <span class="custom-option" data-value="9">SEPTEMBER</span>
-                           <span class="custom-option" data-value="10">OCTOBER</span>
-                           <span class="custom-option" data-value="11">NOVEMBER</span>
-                           <span class="custom-option" data-value="12">DECEMBER</span>
-                       </div>
-                   </div>
-               </div>
-               <div class="custom-select-year">
-                   <div class="custom-select-year">
-                       <div class="custom-select-year__trigger"><span>2020</span>
-                           <div class="arrow"></div>
-                       </div>
-                       <div class="custom-options-year">
-                           <span class="custom-option selected" data-value="2020">2020</span>
-                           <span class="custom-option" data-value="2021">2021</span>
-                           <span class="custom-option" data-value="2022">2022</span>
-                           <span class="custom-option" data-value="2023">2023</span>
-                           <span class="custom-option" data-value="2024">2024</span>
-                           <span class="custom-option" data-value="2025">2025</span>
-                           <span class="custom-option" data-value="2026">2026</span>
-                           <span class="custom-option" data-value="2027">2027</span>
-                           <span class="custom-option" data-value="2028">2028</span>
-                           <span class="custom-option" data-value="2029">2029</span>
-                           <span class="custom-option" data-value="2030">2030</span>
-                           <span class="custom-option" data-value="2031">2031</span>
-                       </div>
-                   </div>
-               </div>
-               <a href="date-selector.html" class="cta js-next">
-                   NEXT
-               </a>
-           </div>
-         </div>
-         <div class="date-selector__footer">
-           <div class="date-selector__footer-content">
-               <small>
-                   Auto-HSCT, autolous hematopoietic stem cell transplant.
-               </small>
-               <small>
-               REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
-               ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
-           </div>
-         </div>
-       </div>      </div>
-    </aside>
   </main>
   <!-- TRAY COMPONENT -->
   <section class="tray js-tray">
