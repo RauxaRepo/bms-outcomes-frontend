@@ -10,6 +10,7 @@ import indicationsInit from './components/indications';
 import tray from './components/tray';
 import header from './components/header';
 import modal from './components/modal';
+import dateSelector from './components/date-selector';
 
 // on dom ready.
 domReady(() => {
@@ -18,4 +19,5 @@ domReady(() => {
   tray();
   header.init();
   modal.init();
+  dateSelector.init();
 });

@@ -33,10 +33,14 @@
 @import '_includes/components/indication';
 @import '_includes/components/tray';
 @import '_includes/components/modal';
+@import '_includes/components/date-selector';
+@import '_includes/components/navigation';
 // **********************************************
 
 // PAGES
 @import '_includes/pages/home';
+@import '_includes/pages/date-selector-page';
+@import '_includes/pages/template-2';
 // **********************************************
 
 // UTILITIES 

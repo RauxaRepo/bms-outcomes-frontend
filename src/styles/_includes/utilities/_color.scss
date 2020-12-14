@@ -1,4 +1,5 @@
 // color
+// sass-lint:disable-all
 .color--red,
 .color-red {
   color: $red;
@@ -13,3 +14,8 @@
 .color-black {
   color: $black;
 }
+
+.text-yellow {
+  color: $rev-yellow !important;
+}
+// sass-lint:enable-all

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+{{>head}}
+
+<body class="js-body template-2">
+  {{>header}}
+  <main class="main js-main">
+    <aside class="aside">
+      <div class="aside__container">
+        <h6><strong class="text-yellow">Start Maintenance Rx:</strong></h6>
+        <h4 class="js-print-therapy-start"></h4>
+        <h6><strong class="text-yellow">Potential<br> progression date:</strong></h6>
+        <h4 class="js-print-prog-end"></h4>
+        <div class="aside__footer">
+          <div class="aside__logo">
+            <a href="./index.html">
+              <img src="./assets/images/rev-logo.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section class="content">
+      {{>navigation
+        study-data="true"
+      }}
+      <div class="content__container">
+        <h3>Patient has the potential to live progression free until <span class="js-print-prog-end-alt"></span></h3>
+      </div>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__content">
+            <small>Auto-HSCT, autologous hematopoietic stem cell transplant.
+              <br><br>
+              REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
+              ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+  {{>tray
+    variant='revpat'
+    thirdTab='Medication Guide'
+    secondTab='Prescribing Information'
+  }}
+  {{>modal
+    id='starting-dose'
+    pdfUrl='../../../assets/images/Patient-Support.pdf'
+    modalColor='#dbebf4'
+  }}
+  {{>footlibs}}
+  {{>error-overlay}}
+</body>
+
+</html>
