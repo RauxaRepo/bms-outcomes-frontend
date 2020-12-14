@@ -1,67 +1,29 @@
-<div class="date-selector js-date-selector">
+<section class="date-selector js-date-selector">
   <div class="date-selector__container">
-    <div>
-      <h5>
+    <div class="date-selector__header">
+      <h3>
         Pick a start date for REVLIMID<br>
         maintenance therapy post auto-HSCT
-      </h5>
+      </h3>
     </div>
-    <div class="layout--aside-left">
-        <div class="custom-select-month">
-            <div class="custom-select-month">
-                <div class="custom-select-month__trigger"><span>JANUARY</span>
-                    <div class="arrow"></div>
-                </div>
-                <div class="custom-options-month">
-                    <span class="custom-option selected" data-value="1">JANUARY</span>
-                    <span class="custom-option" data-value="2">FEBRUARY</span>
-                    <span class="custom-option" data-value="3">MARCH</span>
-                    <span class="custom-option" data-value="4">APRIL</span>
-                    <span class="custom-option" data-value="5">MAY</span>
-                    <span class="custom-option" data-value="6">JUNE</span>
-                    <span class="custom-option" data-value="7">JULY</span>
-                    <span class="custom-option" data-value="8">AUGUST</span>
-                    <span class="custom-option" data-value="9">SEPTEMBER</span>
-                    <span class="custom-option" data-value="10">OCTOBER</span>
-                    <span class="custom-option" data-value="11">NOVEMBER</span>
-                    <span class="custom-option" data-value="12">DECEMBER</span>
-                </div>
-            </div>
+    <div class="date-selector__form">
+      <div class="custom-select custom-select--month js-custom-select js-month-select">
+        <div class="custom-select__trigger js-month-select-trigger">
+          <span class="js-month-select-label"></span>
+          <div class="custom-select__arrow"></div>
         </div>
-        <div class="custom-select-year">
-            <div class="custom-select-year">
-                <div class="custom-select-year__trigger"><span>2020</span>
-                    <div class="arrow"></div>
-                </div>
-                <div class="custom-options-year">
-                    <span class="custom-option selected" data-value="2020">2020</span>
-                    <span class="custom-option" data-value="2021">2021</span>
-                    <span class="custom-option" data-value="2022">2022</span>
-                    <span class="custom-option" data-value="2023">2023</span>
-                    <span class="custom-option" data-value="2024">2024</span>
-                    <span class="custom-option" data-value="2025">2025</span>
-                    <span class="custom-option" data-value="2026">2026</span>
-                    <span class="custom-option" data-value="2027">2027</span>
-                    <span class="custom-option" data-value="2028">2028</span>
-                    <span class="custom-option" data-value="2029">2029</span>
-                    <span class="custom-option" data-value="2030">2030</span>
-                    <span class="custom-option" data-value="2031">2031</span>
-                </div>
-            </div>
+        <div class="custom-select__options js-month-select-options"></div>
+      </div>
+      <div class="custom-select custom-select--year js-custom-select js-year-select">
+        <div class="custom-select__trigger js-year-select-trigger">
+          <span class="js-year-select-label"></span>
+          <div class="custom-select__arrow"></div>
         </div>
-        <a href="date-selector.html" class="cta js-next">
-            NEXT
-        </a>
+        <div class="custom-select__options js-year-select-options"></div>
+      </div>
+      <a href="./study-data.html" class="cta js-date-selector-submit">
+        next
+      </a>
     </div>
   </div>
-  <div class="date-selector__footer">
-    <div class="date-selector__footer-content">
-        <small>
-            Auto-HSCT, autolous hematopoietic stem cell transplant.
-        </small>
-        <small>
-        REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
-        ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
-    </div>
-  </div>
-</div>
+</section>
