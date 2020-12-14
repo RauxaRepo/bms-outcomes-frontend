@@ -1,42 +1,22 @@
 .date-selector {
+  padding-bottom: 9rem;
+  padding-top: 45px;
+
   &__container {
     display: flex;
     flex-direction: column;
 
-    h5 {
-      color: #0274a2;
+    h3 {
+      color: $rev-blue;
     }
+  }
 
-    .layout--aside-left {
-      display: flex;
-      flex-direction: row;
+  &__form {
+    display: flex;
+    flex-direction: row;
 
-      select {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        text-indent: 15px;
-        border-color: #1db1e3;
-        min-height: 45px;
-        font-weight: bold;
-        padding-right: 30px;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        background: #fffacd url('data:image/svg+xml;utf8,<svg viewBox=\'0 0 140 140\' width=\'24\' height=\'24\' xmlns=\'http://www.w3.org/2000/svg\'><g><path d=\'m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z\' fill=\'rgb(29, 127, 227)\'/></g></svg>') no-repeat;
-        background-position: right 5px top 50%;
-
-        &.month {
-          width: 9rem;
-        }
-
-        &.year {
-          width: 7rem;
-        }
-      }
-
-      .cta {
-        margin-left: 8rem;
-      }
+    .cta {
+      margin-left: auto;
     }
   }
 
@@ -57,7 +37,7 @@
 
       *,
       * > * {
-        color: #0274a2;
+        color: $rev-blue;
       }
 
       > *:first-child {
@@ -76,152 +56,124 @@
       }
     }
   }
-  .custom-select-month {
-    position: relative;
+
+
+  .custom-select {
     user-select: none;
-    width: 100%;
-    margin-right: 1rem;
-  }
-  .custom-select-month {
+    width: auto;
     position: relative;
     display: flex;
     flex-direction: column;
-  }
-  .custom-select-month__trigger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    padding: 0 15px;
-    font-size: 20px;
-    height: 50px;
-    line-height: 50px;
-    cursor: pointer;
-    border-color: #1db1e3;
-    border-width: 2px;
-    border-style: solid;
-    background: #fffacd;
-    width: 11rem;
-  }
-  .custom-options-month {
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border: 2px solid #1db1e3;
-    border-top: 0;
-    background: #fff;
-    transition: all 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
-    width: 11rem;
-  }
-  .custom-select-month.open .custom-options-month {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-  }
-  .custom-option {
-    position: relative;
-    display: block;
-    padding: 0 22px 0 22px;
-    font-size: 22px;
-    font-weight: 300;
-    color: #3b3b3b;
-    line-height: 25px;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  .custom-option:hover {
-    cursor: pointer;
-    background-color: #b2b2b2;
-  }
-  .custom-option.selected {
-    background-color: #fec629;
-    font-weight: bold;
-  }
 
-  .arrow {
-    position: relative;
-    height: 15px;
-    width: 15px;
-  }
-  .arrow::before, .arrow::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    width: 0.15rem;
-    height: 100%;
-    transition: all 0.5s;
-  }
-  .arrow::before {
-    left: -5px;
-    transform: rotate(-45deg);
-    background-color: #0274a2;
-  }
-  .arrow::after {
-    left: 5px;
-    transform: rotate(45deg);
-    background-color: #0274a2;
-  }
 
-  .custom-select-year {
-    position: relative;
-    user-select: none;
-    width: 100%;
-  }
+    &__trigger {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      padding: 0 12px 0 18px;
+      font-size: 14px;
+      height: 45px;
+      line-height: 1;
+      cursor: pointer;
+      border-color: $rev-light-blue;
+      border-width: 1px;
+      border-style: solid;
+      width: 168px;
+      text-transform: uppercase;
 
-  .custom-select-year {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
+      &--dirty {
+        background: #fffacd;
+      }
+    }
 
-  .custom-select-year__trigger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    padding: 0 15px;
-    font-size: 20px;
-    height: 50px;
-    line-height: 50px;
-    cursor: pointer;
-    border-color: #1db1e3;
-    border-width: 2px;
-    border-style: solid;
-    background: #fffacd;
-    width: 7rem;
-  }
+    &__options {
+      position: absolute;
+      display: block;
+      top: calc(100% - 4px);
+      left: 0;
+      right: 0;
+      border: 1px solid $rev-light-blue;
+      border-top: 0;
+      background: #fff;
+      transition: visibility .3s ease, opacity .3s ease;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 14;
+      width: 168px;
+    }
 
-  .custom-options-year {
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border: 2px solid #1db1e3;
-    border-top: 0;
-    background: #fff;
-    transition: all 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
-    width: 7rem;
-  }
-  .custom-select-year.open .custom-options-year {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-}
-}
+    &__option {
+      position: relative;
+      display: block;
+      padding: 7px 18px;
+      font-size: 14px;
+      color: $black;
+      line-height: 1;
+      cursor: pointer;
+      transition: background-color .3s ease;
+      text-transform: uppercase;
 
-.tray {
-  height: 63px;
+      // &:last-of-type {
+      //   padding-bottom: 10px;
+      // }
+
+      &--selected {
+        // background-color: #fec629;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: $rev-yellow;
+        // font-weight: bold;
+      }
+    }
+
+    &__arrow {
+      position: relative;
+      height: 15px;
+      width: 15px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        // transition: all 0.5s;
+      }
+
+      &::before {
+        left: -5px;
+        transform: rotate(-45deg);
+        background-color: $rev-blue;
+      }
+
+      &::after {
+        left: 5px;
+        transform: rotate(45deg);
+        background-color: $rev-blue;
+      }
+    }
+
+    &--year {
+      margin-left: 1rem;
+
+      .custom-select__trigger,
+      .custom-select__options {
+        width: 128px;
+      }
+    }
+
+    &.custom-select--open {
+      .custom-select__options {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
 }

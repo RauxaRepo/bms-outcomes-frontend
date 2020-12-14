@@ -1,0 +1,75 @@
+.date-selector-page {
+  .main {
+    h2 {
+      color: $white;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  .aside {
+    background-color: $rev-blue;
+    background-image: none;
+    min-width: 280px;
+    justify-content: flex-start;
+
+    &__container {
+      max-width: 230px;
+      min-width: 195px;
+      margin-left: auto;
+      height: 100%;
+      justify-content: space-around;
+    }
+
+    &__avatar {
+      img {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .footer {
+    margin-left: 0;
+    padding-bottom: 0;
+
+    &__content {
+      padding-left: 0;
+
+      *,
+      * > * {
+        color: $rev-blue;
+      }
+    }
+
+    &__logo {
+      img {
+        width: 126px;
+        height: auto;
+      }
+    }
+  }
+
+  .content {
+    max-width: initial;
+    justify-content: center;
+    background-color: initial;
+    min-width: initial;
+    background-image: url('../images/aside-bg.jpg');
+    background-size: 132px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    position: relative;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      margin-left: inherit;
+      max-width: 100%;
+    }
+  }
+}

@@ -23,6 +23,33 @@
       align-self: center;
     }
   }
+
+  &__footer {
+    padding-bottom: 95px;
+  }
+
+  &__logo {
+    text-align: center;
+
+    img {
+      width: 126px;
+      height: auto;
+      pointer-events: none;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &__avatar {
+    text-align: right;
+
+    img {
+      height: 86px;
+      width: auto;
+    }
+  }
 }
 
 // @include media-breakpoint-up(1024px) {
