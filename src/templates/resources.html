@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+{{>head}}
+
+<body class="js-body resources-page">
+  {{>header}}
+  <main class="main js-main">
+    <aside class="aside">
+      <div class="aside__container">
+
+        <div class="aside__avatar">
+          <img src="./assets/images/maintenance-patient-avatar.png" alt="">
+        </div>
+
+        <div class="aside__footer">
+          <div class="aside__logo">
+            <img src="./assets/images/rev-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section class="content">
+      {{>navigation
+        start-date="true"
+      }}
+      <div class="content__container">
+        {{>resources}}
+      </div>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__content">
+            <small>
+              REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
+              ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+  {{>tray
+    variant='revpat'
+    thirdTab='Medication Guide'
+    secondTab='Prescribing Information'
+  }}
+  {{>modal
+    id='starting-dose'
+    pdfUrl='../../../assets/images/Patient-Support.pdf'
+    modalColor='#dbebf4'
+  }}
+  {{>footlibs}}
+  {{>error-overlay}}
+</body>
+
+</html>
