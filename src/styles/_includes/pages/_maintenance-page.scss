@@ -1,4 +1,6 @@
 .maintenance-page {
+  @extend .template-2;
+
   .aside {
     &__banner {
       position: relative;
