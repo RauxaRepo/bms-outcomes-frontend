@@ -61,7 +61,8 @@ a {
   }
 }
 
-small {
+small,
+.small {
   font-size: rem(11px);
   line-height: rem(15px);
   display: block;

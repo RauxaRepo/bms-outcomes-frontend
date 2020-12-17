@@ -50,6 +50,130 @@
       width: auto;
     }
   }
+
+  &__banner {
+    background-color: #0066a9;
+    display: flex;
+    flex-direction: row;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-right: -20px;
+    margin-left: -20px;
+    margin-bottom: 15px;
+
+    img {
+      height: 86px;
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 23px 0 23px 10px;
+      font-weight: bold;
+      min-height: 86px;
+    }
+
+    &--modal {
+      text-decoration: none;
+      margin-left: 0;
+      margin-top: 30px;
+      margin-bottom: 45px;
+
+      img {
+        height: 53px;
+      }
+
+      span {
+        padding-top: 11px;
+        padding-bottom: 9px;
+        padding-left: 13px;
+        font-size: 14px;
+        line-height: 15px;
+        min-height: 53px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-indent: -22px;
+    margin-left: 22px;
+
+    li {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 18px;
+      font-size: 13px;
+      line-height: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 13px;
+        height: 15px;
+        background-image: url('../images/external-icon.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__scroll {
+    padding-right: 40px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    small {
+      font-size: 10px;
+      line-height: 12px;
+      padding-top: 12px;
+    }
+
+    &-icon {
+      position: relative;
+      height: 15px;
+      width: 30px;
+      display: inline-block;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        // transition: all 0.5s;
+      }
+
+      &::before {
+        left: 9px;
+        transform: rotate(-45deg);
+        background-color: $white;
+      }
+
+      &::after {
+        right: 9px;
+        transform: rotate(45deg);
+        background-color: $white;
+      }
+    }
+  }
 }
 
 // @include media-breakpoint-up(1024px) {

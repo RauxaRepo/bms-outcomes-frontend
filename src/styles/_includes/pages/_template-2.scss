@@ -12,6 +12,7 @@
     background-image: none;
     min-width: 280px;
     justify-content: flex-start;
+    padding-top: 48px;
 
     &__container {
       max-width: 230px;
@@ -27,17 +28,24 @@
 
       h6 {
         margin-bottom: 0;
+        margin-top: 10px;
       }
 
       h4 {
         margin-top: 5px;
+        margin-bottom: 15px;
       }
+    }
+
+    &__footer {
+      margin-top: auto;
+      padding-bottom: 0;
+      padding-right: 40px;
     }
   }
 
   .footer {
     margin-left: 0;
-    padding-bottom: 0;
 
     &__content {
       padding-left: 0;
@@ -58,24 +66,70 @@
 
   .content {
     max-width: initial;
-    justify-content: center;
     background-color: initial;
     min-width: initial;
     background-image: url('../images/aside-bg.jpg');
     background-size: 132px;
     background-position: top right;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
+    padding-top: 18px;
     position: relative;
+    justify-content: flex-start;
 
     &__container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
       margin-left: inherit;
+      display: block;
+      padding-left: 40px;
+      max-width: 656px;
+      box-sizing: content-box;
+      padding-bottom: 0;
+
+      > h1,
+      > h2,
+      > h3,
+      > h4,
+      > h5,
+      > h6 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        color: $rev-dark-blue;
+      }
+
+      > p {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 16px;
+        max-width: 524px;
+        letter-spacing: .03px;
+      }
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+
+      > ul {
+        padding-left: 30px;
+        margin-bottom: 20px;
+        max-width: 524px;
+
+        li {
+          padding-left: 5px;
+          font-size: 12px;
+          line-height: 16px;
+
+          &::marker {
+            font-size: 13px;
+          }
+        }
+      }
+
+      h6 {
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: .04px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
