@@ -11,6 +11,7 @@ import tray from './components/tray';
 import header from './components/header';
 import modal from './components/modal';
 import dateSelector from './components/date-selector';
+import scrollTo from './components/scroll-to';
 
 // on dom ready.
 domReady(() => {
@@ -20,4 +21,5 @@ domReady(() => {
   header.init();
   modal.init();
   dateSelector.init();
+  scrollTo.init();
 });

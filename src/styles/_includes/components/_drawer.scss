@@ -49,6 +49,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-left: 40px;
 }
 
 .drawer__menu-item {
@@ -164,7 +165,7 @@
   top: 0;
   display: block;
   box-sizing: content-box;
-  width: 2rem;
+  width: 25px;
   padding: 0;
   padding: 18px .75rem 30px;
   -webkit-transition: all .6s cubic-bezier(.19, 1, .22, 1);
@@ -198,10 +199,10 @@
     transition: all .6s cubic-bezier(.19, 1, .22, 1);
     background-color: #222;
     position: absolute;
-    top: -10px;
+    top: -8px;
     left: 0;
     content: ' ';
-    top: 10px;
+    top: 8px;
   }
 
   &:before {
@@ -211,7 +212,7 @@
     transition: all .6s cubic-bezier(.19, 1, .22, 1);
     background-color: #222;
     position: absolute;
-    top: -10px;
+    top: -8px;
     left: 0;
     content: ' ';
   }

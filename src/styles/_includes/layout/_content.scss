@@ -13,5 +13,72 @@
     max-width: 828px;
     box-sizing: border-box;
     margin-left: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      font-size: 9px;
+      line-height: 12px;
+      padding-left: 75px;
+      padding-top: 10px;
+    }
+
+    figure {
+      max-width: 93%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__banner {
+    background-color: #c1e7f5;
+    margin-left: -40px;
+    padding: 8px 20px 8px 40px;
+    // max-width: 656px;
+
+    + * {
+      padding-top: 25px;
+      margin-top: 0;
+    }
+
+    small {
+      color: #004990;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    h3 {
+      margin-top: 6px;
+    }
+
+    *,
+    * > * {
+      color: $rev-blue;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__floating-cta {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    padding-top: 300px;
+    right: 0;
+
+    .cta {
+      align-self: center;
+
+    }
   }
 }
