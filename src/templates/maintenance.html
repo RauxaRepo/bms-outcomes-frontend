@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+{{>head}}
+
+<body class="js-body template-2 maintenance-page">
+  {{>header}}
+  <main class="main js-main">
+    <aside class="aside">
+      <div class="aside__container">
+        <a class="aside__banner aside__banner--modal" href="#starting-dose">
+          <img src="./assets/images/external.png" alt="">
+          <span>
+            See recommended<br>
+            starting dose
+          </span>
+        </a>
+        <div class="aside__footer">
+          <div class="aside__logo">
+            <img src="./assets/images/rev-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section class="content">
+      {{>navigation
+        maintenance="true"
+      }}
+      <div class="content__container">
+        <div class="content__banner">
+          <h3><strong>Dose Modifications while on REVLIMID Maintenance</strong></h3>
+        </div>
+        <!-- WYSIWYG -->
+        <p>There are several factors related to starting and continuing REVLIMID<br> maintenance. See below for more information. </p>
+        <div class="content__link-list">
+          <dl>
+            <dt>Dose Modifications for<br> Renal Impairment</dt>
+            <dd>
+              <a href="#">Renal Dosing</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>Dose Modifications for<br> Adverse Events</dt>
+            <dd>
+              <a href="#">Diarrhea</a>
+              <a href="#">Neutropenia</a>
+              <a href="#">Rash</a>
+              <a href="#">Fatigue</a>
+            </dd>
+          </dl>  
+        </div>
+        <!-- WYSIWYG -->
+      </div>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__content">
+            <small>
+              REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
+              ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+  {{>tray
+    variant='revpat'
+    thirdTab='Medication Guide'
+    secondTab='Prescribing Information'
+  }}
+  {{>modal
+    id='starting-dose'
+    pdfUrl='../../../assets/images/Patient-Support.pdf'
+    modalColor='#dbebf4'
+  }}
+  {{>footlibs}}
+  {{>error-overlay}}
+</body>
+
+</html>
