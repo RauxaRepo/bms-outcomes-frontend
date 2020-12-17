@@ -1,12 +1,4 @@
 .template-2 {
-  .main {
-    h2 {
-      color: $white;
-      margin-bottom: 0;
-      margin-top: 0;
-    }
-  }
-
   .aside {
     background-color: $rev-blue;
     background-image: none;
@@ -34,6 +26,12 @@
       h4 {
         margin-top: 5px;
         margin-bottom: 15px;
+      }
+
+      h2 {
+        color: $white;
+        margin-bottom: 0;
+        margin-top: 0;
       }
     }
 
