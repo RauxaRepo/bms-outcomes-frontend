@@ -1,12 +1,4 @@
 .date-selector-page {
-  .main {
-    h2 {
-      color: $white;
-      margin-bottom: 0;
-      margin-top: 0;
-    }
-  }
-
   .aside {
     background-color: $rev-blue;
     background-image: none;
@@ -19,6 +11,12 @@
       margin-left: auto;
       height: 100%;
       justify-content: space-around;
+
+      h2 {
+        color: $white;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
     }
 
     &__avatar {
