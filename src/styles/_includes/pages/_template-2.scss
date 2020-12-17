@@ -46,6 +46,7 @@
 
   .footer {
     margin-left: 0;
+    padding-top: 20px;
 
     &__content {
       padding-left: 0;
@@ -80,9 +81,10 @@
       margin-left: inherit;
       display: block;
       padding-left: 40px;
-      max-width: 656px;
+      max-width: 622px;
       box-sizing: content-box;
       padding-bottom: 0;
+      position: relative;
 
       > h1,
       > h2,

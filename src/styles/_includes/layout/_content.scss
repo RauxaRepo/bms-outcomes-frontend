@@ -67,4 +67,18 @@
       margin-bottom: 0;
     }
   }
+
+  &__floating-cta {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    padding-top: 300px;
+    right: 0;
+
+    .cta {
+      align-self: center;
+
+    }
+  }
 }
