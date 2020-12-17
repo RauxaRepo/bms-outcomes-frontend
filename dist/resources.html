@@ -14,7 +14,7 @@
   <title>BMS Outcomes</title>
   <link type="text/css" href="assets/css/style.css" rel="stylesheet">
 </head>
-<body class="js-body date-selector-page">
+<body class="js-body template-2 resources-page">
   <header class="header js-header" role="banner">
     <div class="container header__container">
       <div class="header__block">
@@ -100,12 +100,13 @@
   </header>  <main class="main js-main">
     <aside class="aside">
       <div class="aside__container">
-        <h2>Bringing<br>Outcomes<br>to Life</h2>
-
-        <div class="aside__avatar">
-          <img src="./assets/images/maintenance-patient-avatar.png" alt="">
-        </div>
-
+        <a class="aside__banner aside__banner--modal" href="#starting-dose">
+          <img src="./assets/images/external.png" alt="">
+          <span>
+            See recommended<br>
+            starting dose
+          </span>
+        </a>
         <div class="aside__footer">
           <div class="aside__logo">
             <img src="./assets/images/rev-logo.png" alt="">
@@ -120,7 +121,7 @@
             <li class="navigation__item">
               <a href="./index.html">Home</a>
             </li>
-            <li class="navigation__item navigation__item--active">
+            <li class="navigation__item ">
               <a href="./start-date.html">Start Date</a>
             </li>
             <li class="navigation__item ">
@@ -129,46 +130,32 @@
             <li class="navigation__item ">
               <a href="./maintenance.html">REVLIMID Maintenance</a>
             </li>
-            <li class="navigation__item ">
+            <li class="navigation__item navigation__item--active">
               <a href="./resources.html">Additional Resources</a>
             </li>
           </ul>
         </div>
       </nav>      <div class="content__container">
-        <section class="date-selector js-date-selector">
-          <div class="date-selector__container">
-            <div class="date-selector__header">
-              <h3>
-                Pick a start date for REVLIMID<br>
-                maintenance therapy post auto-HSCT
-              </h3>
-            </div>
-            <div class="date-selector__form">
-              <div class="custom-select custom-select--month js-custom-select js-month-select">
-                <div class="custom-select__trigger js-month-select-trigger">
-                  <span class="js-month-select-label"></span>
-                  <div class="custom-select__arrow"></div>
-                </div>
-                <div class="custom-select__options js-month-select-options"></div>
-              </div>
-              <div class="custom-select custom-select--year js-custom-select js-year-select">
-                <div class="custom-select__trigger js-year-select-trigger">
-                  <span class="js-year-select-label"></span>
-                  <div class="custom-select__arrow"></div>
-                </div>
-                <div class="custom-select__options js-year-select-options"></div>
-              </div>
-              <a href="./study-data.html" class="cta js-date-selector-submit">
-                next
-              </a>
-            </div>
-          </div>
-        </section>      </div>
+        <div class="content__banner">
+          <h3><strong>Additional Information for your patients on REVLIMID</strong></h3>
+        </div>
+        <!-- WYSIWYG -->
+        <div class="content__link-list">
+          <dl>
+            <dt>REVLIMID Resources</dt>
+            <dd>
+              <a href="#">Celgene Patient Support</a>
+              <a href="#">FIRST Trial Information</a>
+              <a href="#">Patient Education Brochure</a>
+            </dd>
+          </dl>  
+        </div>
+        <!-- WYSIWYG -->
+      </div>
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__content">
-            <small>Auto-HSCT, autologous hematopoietic stem cell transplant.
-              <br><br>
+            <small>
               REVLIMID<sup>®</sup> and REVLIMID REMS<sup>®</sup> are registered trademarks of Celgene Corporation, a Bristol Myers Squibb company.
               ©2020 Bristol-Myers Squibb Company. 11/20 US-REV-20-0458</small>
           </div>

@@ -1,0 +1,23 @@
+.maintenance-page {
+  .aside {
+    &__banner {
+      position: relative;
+      top: 260px;
+    }
+
+    &__footer {
+      margin-top: 0;
+      position: relative;
+      top: 400px;
+    }
+  }
+
+  .content {
+    &__container {
+      > p {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}
