@@ -139,7 +139,7 @@ const modal = {
         scrollbar: '0',
         toolbar: '0',
         navpanes: '0',
-        // zoom: '37.5',
+        zoom: '65',
       },
       forcePDFJS: true,
       PDFJS_URL: pdfViewerUrl,
@@ -166,6 +166,7 @@ const modal = {
       Object.assign(viewerContainer.style,
         {
           overflowX: 'hidden',
+          paddingBottom: '63px',
         });
 
       const minifyTray = () => {
