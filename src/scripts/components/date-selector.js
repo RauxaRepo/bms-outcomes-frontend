@@ -209,6 +209,7 @@ const dateSelector = {
   },
   outputValues: () => {
     const printTherapyEls = [...document.querySelectorAll('.js-print-therapy-start')];
+    const printTherapyAltEls = [...document.querySelectorAll('.js-print-therapy-start-alt')];
     const printProgressionEls = [...document.querySelectorAll('.js-print-prog-end')];
     const printProgressionAltEls = [...document.querySelectorAll('.js-print-prog-end-alt')];
 
@@ -217,6 +218,14 @@ const dateSelector = {
         const data = JSON.parse(sessionStorage.getItem('therapyStart'));
   
         el.innerHTML = `${data.month}/${data.year}`;
+      });
+    }
+
+    if (printTherapyAltEls.length) {
+      printTherapyAltEls.forEach((el) => {
+        const data = JSON.parse(sessionStorage.getItem('therapyStart'));
+  
+        el.innerHTML = `${data.monthYearString}`;
       });
     }
 

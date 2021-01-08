@@ -4,6 +4,7 @@
   background-color: $rev-blue;
   flex-basis: 75%;
   min-width: 828px;
+  flex: 1;
 
   &__container {
     padding-top: 30px;
@@ -56,6 +57,8 @@
 
     h3 {
       margin-top: 6px;
+      font-size: rem(20px);
+      line-height: rem(24px);
     }
 
     *,

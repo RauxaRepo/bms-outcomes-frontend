@@ -110,6 +110,7 @@
   &__span {
     @extend .close-icon;
     border-color: $rev-light-blue;
+    pointer-events: none;
 
     &::after,
     &::before {
