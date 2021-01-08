@@ -10,7 +10,7 @@ const tabs = [...trayEl.getElementsByClassName('js-tray-tab')];
 const tabButtons = [...trayEl.getElementsByClassName('js-tab-select')];
 const scrollBuffer = 15;
 const initialScrollPos = window.pageYOffset;
-let trayHeight = 63;
+let trayHeight = 80;
 const body = document.querySelector('.js-body');
 
 // ************************************************
