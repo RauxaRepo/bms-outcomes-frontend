@@ -4,8 +4,8 @@
   margin-right: auto;
   min-height: 100vh;
   display: flex;
-  // grid-template-columns: 1fr 200px;
-  // grid-template-rows: 1fr;
-  // grid-column-gap: 0;
-  // grid-row-gap: 0;
+}
+
+body {
+  background: url('../images/aside-bg.jpg') top right / 132px no-repeat, linear-gradient(to right, #0071b0 20%, #fff 20%, #fff 20%, #fff 20%);
 }

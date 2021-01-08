@@ -38,7 +38,7 @@
     &__footer {
       margin-top: auto;
       padding-bottom: 0;
-      padding-right: 40px;
+      padding-right: 0;
     }
   }
 
@@ -67,10 +67,10 @@
     max-width: initial;
     background-color: initial;
     min-width: initial;
-    background-image: url('../images/aside-bg.jpg');
-    background-size: 132px;
-    background-position: top right;
-    background-repeat: no-repeat;
+    // background-image: url('../images/aside-bg.jpg');
+    // background-size: 132px;
+    // background-position: top right;
+    // background-repeat: no-repeat;
     padding-top: 18px;
     position: relative;
     justify-content: flex-start;

@@ -1,3 +1,17 @@
 .study-data-page {
   @extend .template-2;
+
+  .content__banner {
+    h3 {
+      margin-top: 6px;
+      font-size: rem(22px);
+      line-height: rem(26px);
+    }
+  }
+
+  .aside__container {
+    h4 {
+      text-transform: uppercase;
+    }
+  }
 }
