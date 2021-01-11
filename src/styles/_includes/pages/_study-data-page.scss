@@ -8,4 +8,19 @@
       line-height: rem(26px);
     }
   }
+
+  .content__floating-cta {
+    padding-top: 380px;
+    right: 10px;
+  }
+
+  .content__container {
+    >h6 {
+      font-size: 14px;
+    }
+
+    >h3 {
+      font-size: 24px;
+    }
+  }
 }
