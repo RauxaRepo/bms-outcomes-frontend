@@ -147,18 +147,20 @@
             </div>
             <div class="date-selector__form">
               <div class="custom-select custom-select--month js-custom-select js-month-select">
-                <div class="custom-select__trigger js-month-select-trigger">
+                <div class="custom-select__trigger js-month-select-trigger" aria-describedby="month-error">
                   <span class="js-month-select-label"></span>
                   <div class="custom-select__arrow"></div>
                 </div>
                 <div class="custom-select__options js-month-select-options"></div>
+                <span class="custom-select__error p js-custom-select-error" role="alert" id="month-error">Select Month</span>
               </div>
               <div class="custom-select custom-select--year js-custom-select js-year-select">
-                <div class="custom-select__trigger js-year-select-trigger">
+                <div class="custom-select__trigger js-year-select-trigger" aria-describedby="year-error">
                   <span class="js-year-select-label"></span>
                   <div class="custom-select__arrow"></div>
                 </div>
                 <div class="custom-select__options js-year-select-options"></div>
+                <span class="custom-select__error p js-custom-select-error" role="alert" id="year-error">Select Year</span>
               </div>
               <a href="./study-data.html" class="cta js-date-selector-submit">
                 next
