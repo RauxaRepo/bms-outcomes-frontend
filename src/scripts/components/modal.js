@@ -161,12 +161,16 @@ const modal = {
     const modalIframe = openedModal.querySelector('iframe');
 
     modalIframe.onload = () => {
+      const iFrameHead = modalIframe.contentWindow.document.querySelector('head');
       const viewerContainer = modalIframe.contentWindow.document.getElementById('viewerContainer');
+      const iFrameCss = '<style>#viewerContainer .page {background-color:transparent !important;}</style>';
+
+      iFrameHead.insertAdjacentHTML('beforeend', iFrameCss);
 
       Object.assign(viewerContainer.style,
         {
           overflowX: 'hidden',
-          paddingBottom: '63px',
+          marginBottom: '63px',
         });
 
       const minifyTray = () => {

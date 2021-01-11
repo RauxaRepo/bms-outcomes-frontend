@@ -9,9 +9,18 @@
     }
   }
 
-  .aside__container {
-    h4 {
-      text-transform: uppercase;
+  .content__floating-cta {
+    padding-top: 380px;
+    right: 10px;
+  }
+
+  .content__container {
+    >h6 {
+      font-size: 14px;
+    }
+
+    >h3 {
+      font-size: 24px;
     }
   }
 }

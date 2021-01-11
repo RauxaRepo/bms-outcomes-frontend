@@ -50,11 +50,13 @@ const dateSelector = {
       const currYearSelected = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-option.custom-select__option--selected`);
       const selectedValue = target.dataset.year;
       const yearSelectTrigger = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-trigger`);
+      const yearErrorlbl = document.querySelector('.js-year-select .custom-select__error');
 
       if (currYearSelected && currYearSelected.dataset.year !== selectedValue) currYearSelected.classList.remove('custom-select__option--selected');
       target.classList.add('custom-select__option--selected');
       yearSelectTrigger.classList.add('custom-select__trigger--dirty');
       yearSelectLabel.innerHTML = selectedValue;
+      yearErrorlbl.classList.remove('custom-select__error--visible');
     };
 
     yearOptions.forEach((yearOption) => {
@@ -72,11 +74,13 @@ const dateSelector = {
       const currMonthSelected = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-option.custom-select__option--selected`);
       const selectedValue = target.dataset.month;
       const monthSelectTrigger = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-trigger`);
+      const monthErrorLbl = document.querySelector('.js-month-select .custom-select__error');
 
       if (currMonthSelected && currMonthSelected.dataset.month !== selectedValue) currMonthSelected.classList.remove('custom-select__option--selected');
       target.classList.add('custom-select__option--selected');
       monthSelectTrigger.classList.add('custom-select__trigger--dirty');
       monthSelectLabel.innerHTML = target.innerHTML;
+      monthErrorLbl.classList.remove('custom-select__error--visible');
     };
 
     monthOptions.forEach((monthOption) => {
@@ -90,6 +94,8 @@ const dateSelector = {
     const elemYear = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-option.custom-select__option--selected`);
     const currTherapyStart = JSON.parse(sessionStorage.getItem('therapyStart'));
     const currTherapyStartDate = new Date(currTherapyStart.fullDate);
+    const monthErrorLbl = document.querySelector('.js-month-select .custom-select__error');
+    const yearErrorlbl = document.querySelector('.js-year-select .custom-select__error');
 
     if (elemYear) {
       const { year } = elemYear.dataset;
@@ -98,6 +104,9 @@ const dateSelector = {
   
       dateSelector.setStartAndProgDate(newTherapyStartFullDate);
       sessionStorage.setItem('isDefaultStartDate', 0);
+      yearErrorlbl.classList.remove('custom-select__error--visible');
+    } else {
+      yearErrorlbl.classList.add('custom-select__error--visible');
     }
 
     if (elemMonth) {
@@ -110,9 +119,14 @@ const dateSelector = {
   
       dateSelector.setStartAndProgDate(newTherapyStartFullDate);
       sessionStorage.setItem('isDefaultStartDate', 0);
+      monthErrorLbl.classList.remove('custom-select__error--visible');
+    } else {
+      monthErrorLbl.classList.add('custom-select__error--visible');
     }
 
-    document.location.href = targetLocation;
+    if (elemMonth && elemYear) {
+      document.location.href = targetLocation;
+    }
   },
   setStartAndProgDate: (startDate) => {
     const saveTherapyStart = () => {
@@ -192,6 +206,9 @@ const dateSelector = {
     if (isDefaultStartDate === 1) {
       monthSelectLabel.innerHTML = 'month';
       yearSelectLabel.innerHTML = 'year';
+
+      document.querySelector('.js-month-select').classList.add('custom-select--default');
+      document.querySelector('.js-year-select').classList.add('custom-select--default');
 
       return;
     }
