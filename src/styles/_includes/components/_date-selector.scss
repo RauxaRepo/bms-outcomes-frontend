@@ -81,7 +81,7 @@
       border-width: 1px;
       border-style: solid;
       width: 168px;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       &--dirty {
         background: #fffacd;
@@ -114,7 +114,7 @@
       line-height: 1;
       cursor: pointer;
       transition: background-color .3s ease;
-      text-transform: uppercase;
+      text-transform: capitalize;
 
       // &:last-of-type {
       //   padding-bottom: 10px;
