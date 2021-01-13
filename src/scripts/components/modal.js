@@ -170,7 +170,9 @@ const modal = {
       Object.assign(viewerContainer.style,
         {
           overflowX: 'hidden',
-          marginBottom: '63px',
+          overflowY: 'scroll',
+          paddingBottom: '80px',
+          minHeight: '100vh',
         });
 
       const minifyTray = () => {
@@ -180,8 +182,8 @@ const modal = {
           return;
         }
 
-        if (viewerContainer.scrollTop > 75) {
-          trayEl.style.height = `${63}px`;
+        if (viewerContainer.scrollTop > 30) {
+          trayEl.style.height = `${80}px`;
         }
       };
 
