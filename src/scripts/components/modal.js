@@ -173,7 +173,7 @@ const modal = {
           overflowX: 'hidden',
           overflowY: 'scroll',
           paddingBottom: '80px',
-          minHeight: '100vh',
+          // minHeight: '100vh',
         });
 
       const minifyTray = () => {
