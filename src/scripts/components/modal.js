@@ -164,6 +164,7 @@ const modal = {
       const iFrameHead = modalIframe.contentWindow.document.querySelector('head');
       const viewerContainer = modalIframe.contentWindow.document.getElementById('viewerContainer');
       const iFrameCss = '<style>#viewerContainer .page {background-color:transparent !important;}</style>';
+      let scrollCount = 0;
 
       iFrameHead.insertAdjacentHTML('beforeend', iFrameCss);
 
@@ -177,17 +178,19 @@ const modal = {
 
       const minifyTray = () => {
         const trayEl = document.querySelector('.js-tray');
+        scrollCount += 1;
         if (trayEl.classList.contains('js-tray-minified')) {
           viewerContainer.removeEventListener('scroll', minifyTray);
           return;
         }
 
-        if (viewerContainer.scrollTop > 30) {
+        if (scrollCount > 10) {
           trayEl.style.height = `${80}px`;
         }
       };
 
-      viewerContainer.addEventListener('scroll', minifyTray);
+      // viewerContainer.addEventListener('scroll', minifyTray);
+      viewerContainer.addEventListener('wheel', minifyTray, false);
     };
   },
   init: () => {
