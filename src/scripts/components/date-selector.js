@@ -28,8 +28,11 @@ const dateSelector = {
   populateYearField: () => {
     const yearOptionsContainer = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-options`);
     const currYear = presentDate.getFullYear();
-    const startYear = currYear - 6;
-    const endYear = currYear + 7;
+    // const startYear = currYear - 6;
+    // const endYear = currYear + 7;
+    const startYear = 2015;
+    const endYear = 2018;
+
     let yearIndex;
 
     for (yearIndex = startYear; yearIndex <= endYear; yearIndex += 1) {
@@ -89,7 +92,7 @@ const dateSelector = {
   },
   submitButtonHandler: (e) => {
     e.preventDefault();
-    const targetLocation = e.target.getAttribute('href'); 
+    const targetLocation = e.target.getAttribute('href');
     const elemMonth = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsMonthSelect}-option.custom-select__option--selected`);
     const elemYear = dateSelectorEl.querySelector(`.${dateSelector.CONFIG.classes.jsYearSelect}-option.custom-select__option--selected`);
     const currTherapyStart = JSON.parse(sessionStorage.getItem('therapyStart'));
@@ -101,7 +104,7 @@ const dateSelector = {
       const { year } = elemYear.dataset;
       currTherapyStartDate.setFullYear(year);
       const newTherapyStartFullDate = new Date(currTherapyStartDate);
-  
+
       dateSelector.setStartAndProgDate(newTherapyStartFullDate);
       sessionStorage.setItem('isDefaultStartDate', 0);
       yearErrorlbl.classList.remove('custom-select__error--visible');
@@ -116,7 +119,7 @@ const dateSelector = {
 
       currTherapyStartDate.setMonth(month);
       const newTherapyStartFullDate = new Date(currTherapyStartDate);
-  
+
       dateSelector.setStartAndProgDate(newTherapyStartFullDate);
       sessionStorage.setItem('isDefaultStartDate', 0);
       monthErrorLbl.classList.remove('custom-select__error--visible');
@@ -233,7 +236,7 @@ const dateSelector = {
     if (printTherapyEls.length) {
       printTherapyEls.forEach((el) => {
         const data = JSON.parse(sessionStorage.getItem('therapyStart'));
-  
+
         el.innerHTML = `${data.month}/${data.year}`;
       });
     }
@@ -241,7 +244,7 @@ const dateSelector = {
     if (printTherapyAltEls.length) {
       printTherapyAltEls.forEach((el) => {
         const data = JSON.parse(sessionStorage.getItem('therapyStart'));
-  
+
         el.innerHTML = `${data.monthYearString}`;
       });
     }
@@ -249,7 +252,7 @@ const dateSelector = {
     if (printProgressionEls.length) {
       printProgressionEls.forEach((el) => {
         const data = JSON.parse(sessionStorage.getItem('progressionEnd'));
-  
+
         el.innerHTML = `${data.month}/${data.year}`;
       });
     }
@@ -257,7 +260,7 @@ const dateSelector = {
     if (printProgressionAltEls.length) {
       printProgressionAltEls.forEach((el) => {
         const data = JSON.parse(sessionStorage.getItem('progressionEnd'));
-  
+
         el.innerHTML = `${data.monthYearString}`;
       });
     }
