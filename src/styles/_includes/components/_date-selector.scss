@@ -58,7 +58,6 @@
     }
   }
 
-
   .custom-select {
     user-select: none;
     width: auto;
@@ -81,7 +80,7 @@
       border-width: 1px;
       border-style: solid;
       width: 168px;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       &--dirty {
         background: #fffacd;
@@ -114,7 +113,7 @@
       line-height: 1;
       cursor: pointer;
       transition: background-color .3s ease;
-      text-transform: capitalize;
+      text-transform: uppercase;
 
       // &:last-of-type {
       //   padding-bottom: 10px;

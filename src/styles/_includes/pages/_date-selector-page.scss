@@ -38,10 +38,12 @@
 
     &__content {
       padding-left: 0;
+      max-width: 600px;
 
       *,
       * > * {
-        color: $rev-blue;
+        // color: $rev-blue;
+        color: #000;
       }
     }
 

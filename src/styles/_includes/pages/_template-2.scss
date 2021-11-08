@@ -52,7 +52,8 @@
 
       *,
       * > * {
-        color: $rev-blue;
+        // color: $rev-blue;
+        color: #000;
       }
     }
 
@@ -81,7 +82,7 @@
       margin-left: inherit;
       display: block;
       padding-left: 40px;
-      max-width: 622px;
+      max-width: 636px;
       box-sizing: content-box;
       padding-bottom: 0;
       position: relative;
