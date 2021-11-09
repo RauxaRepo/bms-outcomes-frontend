@@ -48,7 +48,7 @@
 
     &__content {
       padding-left: 0;
-      max-width: 600px;
+      max-width: 100%;
 
       *,
       * > * {
@@ -108,7 +108,7 @@
         letter-spacing: .03px;
       }
 
-      > *:last-child {
+      > *:nth-last-child(2) {
         margin-bottom: 0;
       }
 

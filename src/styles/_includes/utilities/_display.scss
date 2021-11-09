@@ -26,3 +26,11 @@
     display: initial;
   }
 }
+
+.show-on-study-data-page,
+.show-on-resources-page,
+.show-on-maintenance-page,
+.show-on-date-selector-page,
+.show-on-home {
+  display: none;
+}

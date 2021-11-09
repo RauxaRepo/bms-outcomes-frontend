@@ -38,7 +38,7 @@
 
     &__content {
       padding-left: 0;
-      max-width: 600px;
+      max-width: 100%;
 
       *,
       * > * {
@@ -81,5 +81,9 @@
       padding-left: 40px;
       padding-right: 0;
     }
+  }
+
+  .show-on-date-selector-page {
+    display: initial;
   }
 }
