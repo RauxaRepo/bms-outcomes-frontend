@@ -38,10 +38,12 @@
 
     &__content {
       padding-left: 0;
+      max-width: 100%;
 
       *,
       * > * {
-        color: $rev-blue;
+        // color: $rev-blue;
+        color: #000;
       }
     }
 
@@ -79,5 +81,9 @@
       padding-left: 40px;
       padding-right: 0;
     }
+  }
+
+  .show-on-date-selector-page {
+    display: initial;
   }
 }
