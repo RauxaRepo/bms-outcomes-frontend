@@ -623,7 +623,8 @@
       text-decoration: none;
       font-size: rem(16px);
 
-      &:hover {
+      &:hover,
+      &:hover > * {
         color: $rev-yellow;
       }
     }

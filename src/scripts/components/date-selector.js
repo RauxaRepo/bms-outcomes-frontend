@@ -31,7 +31,7 @@ const dateSelector = {
     // const startYear = currYear - 6;
     // const endYear = currYear + 7;
     const startYear = 2015;
-    const endYear = 2018;
+    const endYear = 2028;
 
     let yearIndex;
 
